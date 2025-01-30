@@ -1,0 +1,15 @@
+[
+  { "name": "HTML", "icon": "FaHtml5", "color": "text-orange-500" },
+  { "name": "CSS", "icon": "FaCss3", "color": "text-blue-500" },
+  { "name": "Tailwind", "icon": "RiTailwindCssFill", "color": "text-sky-500" },
+  { "name": "JS", "icon": "FaJs", "color": "text-yellow-400" },
+  { "name": "React", "icon": "FaReact", "color": "text-blue-600" },
+  { "name": "Vite", "icon": "vite.svg", "type": "image" },
+  { "name": "Express JS", "icon": "SiExpress", "color": "text-green-500" },
+  { "name": "Node JS", "icon": "FaNodeJs", "color": "text-green-400" },
+  { "name": "Mongo DB", "icon": "SiMongodb", "color": "text-green-600" },
+  { "name": "C", "icon": "FaC", "color": "text-blue-600" },
+  { "name": "C++", "icon": "TbBrandCpp", "color": "text-blue-600" }
+]
+
+  
