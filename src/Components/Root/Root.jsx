@@ -5,6 +5,7 @@ import Skills from "../Skills/Skills";
 import Projects from "../Projects/Projects";
 import Footer from "../Footer/Footer";
 import Contact from "../Contact/Contact";
+import Education from "../Education/Education";
 
 const Root = () => {
   return (
@@ -13,6 +14,7 @@ const Root = () => {
       <div >
       <Home></Home>
       <About></About>
+      <Education></Education>
       <Skills></Skills>
       <Projects></Projects>
       <Contact></Contact>

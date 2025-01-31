@@ -1,6 +1,6 @@
 import { FaCss3, FaHtml5, FaJs, FaNodeJs, FaReact } from "react-icons/fa";
 import Title from "../Navbar/Title";
-import { SiExpress, SiMongodb, SiVite } from "react-icons/si";
+import { SiExpress, SiMongodb, SiFirebase } from "react-icons/si";
 import { FaC } from "react-icons/fa6";
 import { TbBrandCpp } from "react-icons/tb";
 import { RiTailwindCssFill } from "react-icons/ri";
@@ -142,6 +142,21 @@ const Skills = () => {
             y: [-20, -10, -20],
           }}
           transition={{
+            duration: 3.5,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className="border border-yellow-300 rounded-xl py-3 px-6 flex justify-center items-center gap-1 flex-col"
+        >
+          <SiFirebase className="text-5xl text-orange-700"></SiFirebase>
+          <p className="text-lg font-semibold text-yellow-300">Firebase</p>
+        </motion.div>
+
+        <motion.div
+          animate={{
+            y: [-20, -10, -20],
+          }}
+          transition={{
             duration: 5.5,
             repeat: Infinity,
             ease: "easeInOut",
@@ -151,6 +166,7 @@ const Skills = () => {
           <FaC className="text-5xl text-blue-600"></FaC>
           <p className="text-lg font-semibold text-yellow-300">C</p>
         </motion.div>
+
 
         <div className="border animate__animated animate__headShake animate__infinite animate__slow 3s border-yellow-300 rounded-xl py-3 px-6 flex justify-center items-center gap-1 flex-col">
           <TbBrandCpp className="text-5xl text-blue-600" />

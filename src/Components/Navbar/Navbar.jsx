@@ -4,12 +4,14 @@ import './Navbar.css'
 import { NavLink } from "react-router-dom"
 import { Button } from "@mui/material"
 const Navbar = () => {
-    const links = <>
-        <NavLink><li><a>Home</a></li></NavLink>
-        <NavLink><li><a>About</a></li></NavLink>
-        <NavLink><li><a>Contact</a></li></NavLink>
-        <NavLink><li><a>Projects</a></li></NavLink>
+  const links = (
+    <>
+      <NavLink><li><a href="#">Home</a></li></NavLink>
+      <NavLink><li><a href="#about">About</a></li></NavLink>
+      <NavLink><li><a href="#contact">Contact</a></li></NavLink>
+      <NavLink><li><a href="#projects">Projects</a></li></NavLink>
     </>
+  );
   return (
     <div className=" border-b-2 border-violet-900 pb-1">
     <div className="navbar bg-transparent  ">
@@ -35,7 +37,7 @@ const Navbar = () => {
         {links}
       </ul>
     </div>
-    <p className="md:text-3xl text-xl font-bold">Rijoan Rashid Opar</p>
+    <p className="md:text-3xl text-sm font-bold">Rijoan Rashid Opar</p>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal gap-1 font-semibold">

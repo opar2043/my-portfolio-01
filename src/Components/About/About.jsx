@@ -5,10 +5,10 @@ import { Typewriter } from "react-simple-typewriter";
 
 const About = () => {
   return (
-    <div className="bg-transparent rounded-xl bg-gradient-to-t from-black via-slate-950  to-violet-950 text-white py-16 my-14">
+    <div  className="bg-transparent rounded-xl bg-gradient-to-t from-black via-slate-950  to-violet-950 text-white py-16 my-14">
       <Title title={"About Me"}></Title>
 
-      <section className="mx-auto max-w-screen-xl px-6 lg:px-12 my-10">
+      <section id="about" className="mx-auto max-w-screen-xl px-6 lg:px-12 my-10">
         <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-10">
           
           {/* Image Section with Animation */}
