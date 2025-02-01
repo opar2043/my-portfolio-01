@@ -2,8 +2,15 @@ import { FaFacebook, FaGithub, FaLinkedin} from "react-icons/fa"
 import { SiGmail } from "react-icons/si"
 import './Navbar.css'
 import { NavLink } from "react-router-dom"
-import { Button } from "@mui/material"
+import { ToastContainer, toast } from 'react-toastify';
+import { PiReadCvLogoThin } from "react-icons/pi";
+
 const Navbar = () => {
+
+  function handleToast(){
+    toast("Wow so easy!");
+  }
+
   const links = (
     <>
       <NavLink><li><a href="#">Home</a></li></NavLink>
@@ -12,6 +19,7 @@ const Navbar = () => {
       <NavLink><li><a href="#projects">Projects</a></li></NavLink>
     </>
   );
+
   return (
     <div className=" border-b-2 border-violet-900 pb-1">
     <div className="navbar bg-transparent  ">
@@ -37,19 +45,29 @@ const Navbar = () => {
         {links}
       </ul>
     </div>
-    <p className="md:text-3xl text-sm font-bold">Rijoan Rashid Opar</p>
+    <p className="md:text-3xl text-sm font-bold text-yellow-200">Rijoan Rashid Opar</p>
   </div>
   <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal gap-1 font-semibold">
+    <ul className="menu menu-horizontal pl-2 gap-1 font-semibold">
       {links}
     </ul>
   </div>
   <div className="navbar-end">
    {/* Navbar Icons */}
    <div className="flex flex-wrap gap-3 text-xl w-1/2">
-   <Button variant="contained"> Hire Me</Button>
-      
-   </div>
+  <ToastContainer />
+<a href="https://i.ibb.co.com/ksbWfVW3/Resume-Jpg.jpg ">
+{/* Pdf Copy */}
+{/* <a href="https://i.ibb.co.com/jZzqdZVY/Resume.jpg"> */}
+<button
+    onClick={handleToast}
+    className="py-2 px-3 md:px-6 flex items-center gap-1 rounded-md text-sm font-semibold bg-gradient-to-r from-violet-600 to-violet-900 hover:from-yellow-300 hover:to-yellow-600 hover:text-black"
+  >
+    <PiReadCvLogoThin className="text-lg" /> Resume
+  </button>
+</a>
+</div>
+
  
   </div>
 </div>

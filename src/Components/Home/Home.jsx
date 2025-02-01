@@ -1,5 +1,6 @@
 import { Typewriter } from 'react-simple-typewriter'
 import opar from '../../assets/Opar.jpg'
+import opar3 from '../../assets/opar3.jpg'
 import 'animate.css';
 import { motion } from "motion/react";
 
@@ -11,8 +12,8 @@ const Home = () => {
           {/* Image Serction */}
           <div className="w-sm place-content-center place-items-center rounded-lg  flex-1">
             <img
-              src={opar}
-              className="w-[300px] bg-cover rounded-lg"
+              src={opar3}
+              className="md:w-[400px] bg-cover rounded-lg"
             />
           </div>
 

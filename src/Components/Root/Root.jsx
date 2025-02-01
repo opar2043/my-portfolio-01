@@ -9,9 +9,9 @@ import Education from "../Education/Education";
 
 const Root = () => {
   return (
-    <div className="absolute inset-0 -z-10 max-h-fit text-white w-full items-center [background:radial-gradient(135%_135%_at_55%_15%,#000_43%,#63e_105%)] max-w-6xl mx-auto md:px-10 px-4">
+    <div className="absolute inset-0 -z-10 max-h-fit text-white w-full items-center [background:radial-gradient(135%_135%_at_55%_15%,#000_43%,#63e_105%)] max-w-6xl mx-auto ">
       <Navbar></Navbar>
-      <div >
+      <div className="md:px-10 px-4">
       <Home></Home>
       <About></About>
       <Education></Education>
