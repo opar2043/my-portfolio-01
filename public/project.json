@@ -1,4 +1,3 @@
-
 [
   {
     "id": 1,
@@ -7,7 +6,8 @@
     "name": "Rijoan Rashid Opar",
     "description": "Full-Stack Developer specializing in React, Tailwind CSS, and Node.js. It's a site where users can find their spouse or soulmate by category. It's a very user-friendly site where I built both user and admin dashboard panels and functionalities.",
     "project_link": "https://creative-starship-dcc9e7.netlify.app/",
-    "tech": ["React", "Tailwind", "MongoDB", "Node.js"]
+    "tech": ["React", "Tailwind", "MongoDB", "Node.js"],
+    "plan": "in future i will add some new technologies . and will make more user friendly . i will use mongoose in backend and also nodeJs"
   },
   {
     "id": 2,
@@ -16,7 +16,8 @@
     "name": "Rijoan Rashid Opar",
     "description": "Frontend Developer with expertise in React, MongoDB, and modern CSS frameworks. This is a website where you can create your own assignments. Students can submit their assignments, and teachers can grade them. It's a well-designed and beneficial website.",
     "project_link": "https://teal-meerkat-08607f.netlify.app",
-    "tech": ["React", "Tailwind", "MongoDB","express js","firebase"]
+    "tech": ["React", "Tailwind", "MongoDB", "express js", "firebase"],
+    "plan": "in future i will add some new technologies . and will make more user friendly . i will use mongoose in backend and also nodeJs. Thogh this is not complete i will add admin dashboard where a teacher give and take marks to all."
   },
   {
     "id": 3,
@@ -25,7 +26,8 @@
     "name": "Rijoan Rashid Opar",
     "description": "Backend Engineer experienced in Node.js, Express, and MongoDB. People can share their ideas, build good communication with others, and help start-ups by providing proper knowledge.",
     "project_link": "https://gilded-twilight-2a1954.netlify.app/",
-    "tech": ["React", "Tailwind", "MongoDB", "Node.js","firebase"]
+    "tech": ["React", "Tailwind", "MongoDB", "Node.js", "firebase"],
+    "plan": "in future i will add some new technologies . and will make more user friendly . add some more new features and make good design. i will use some more liabrary"
   },
   {
     "id": 4,
@@ -34,7 +36,8 @@
     "name": "Rijoan Rashid Opar",
     "description": "Backend Engineer experienced in Node.js, Express, and MongoDB. This website allows users to add, delete, and modify their recipes. Customers can also place orders and pay their bills online.",
     "project_link": "https://vocal-cranachan-4eceb2.netlify.app",
-    "tech": ["React", "Tailwind", "MongoDB", "express js" , "firebase"]
+    "tech": ["React", "Tailwind", "MongoDB", "express js", "firebase"],
+    "plan": "in future i will add some new technologies . and will make more user friendly . Make The web site more faster and user friendly.Thogh the payment is not intigrated i will add this featuries also"
   },
   {
     "id": 5,
@@ -43,6 +46,7 @@
     "name": "Rijoan Rashid Opar",
     "description": "A simple digital gadget website built using React technologies. Users can easily browse and purchase their desired gadgets. The site is built with React, Tailwind, and other supporting technologies.",
     "project_link": "https://stellar-narwhal-c69347.netlify.app/",
-    "tech": ["React", "Tailwind"]
+    "tech": ["React", "Tailwind"],
+    "plan": "in future i will add some new technologies . and will make more user friendly . i will use mongoose in backend and also nodeJs"
   }
 ]

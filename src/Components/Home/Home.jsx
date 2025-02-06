@@ -8,14 +8,14 @@ import { animate } from "motion";
 
 const Home = () => {
   return (
-    <div>
+    <div className="mt-20">
       <div className="hero min-h-screen">
         <div className="hero-content flex-col gap-10 lg:flex-row-reverse">
           {/* Image Serction */}
           <motion.div
-            initial={{ x: 200, opacity: 0 }} // Starts off-screen to the left and invisible
+            initial={{ x: 25, opacity: 0 }} // Starts off-screen to the left and invisible
             whileInView={{ x: 0, opacity: 1 }} // Moves to position and becomes visible
-            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }} // Smooth transition
+            transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }} // Smooth transition
             viewport={{ once: true }} // Animates only once when in view
             className="w-sm place-content-center place-items-center rounded-lg  flex-1"
           >
@@ -23,9 +23,9 @@ const Home = () => {
           </motion.div>
 
           <motion.div
-            initial={{ x: -200, opacity: 0 }} // Starts off-screen to the left and invisible
+            initial={{ x: -25, opacity: 0 }} // Starts off-screen to the left and invisible
             whileInView={{ x: 0, opacity: 1 }} // Moves to position and becomes visible
-            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }} // Smooth transition
+            transition={{ duration: 0.9, delay: 0.3, ease: "easeInOut" }} // Smooth transition
             viewport={{ once: true }} // Animates only once when in view
             className="flex-1 animate__backInLeft"
           >
@@ -33,7 +33,7 @@ const Home = () => {
               Hello , I'm
             </p>
 
-            <h1 className="text-5xl font-bold bg-gradient-to-r from-yellow-100 via-yellow-300 to-yellow-100 bg-clip-text text-transparent">
+            <h1 className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-yellow-100 via-yellow-300 to-yellow-100 bg-clip-text text-transparent">
               <Typewriter
                 words={[" Rijoan Rashid Opar"]}
                 loop={Infinity}

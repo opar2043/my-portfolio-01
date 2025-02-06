@@ -9,9 +9,9 @@ const Education = () => {
       <div className="mt-4 text-lg">
         <motion.div className="flex flex-col md:flex-row">
           <motion.div
-            initial={{ x: -200, opacity: 0 }}
+            initial={{ x: 25, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.9, delay: 0.3, ease: "easeOut" }}
+            transition={{ duration: 0.9, delay: 0.2, ease: "easeOut" }}
             viewport={{ once: true }}
           >
             <p>
@@ -39,9 +39,9 @@ const Education = () => {
           </motion.div>
 
           <motion.div
-            initial={{ x: 200, opacity: 0 }}
+            initial={{ x: -25, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.9, delay: 0.3, ease: "easeOut" }}
+            transition={{ duration: 0.9, delay: 0.6, ease: "easeOut" }}
             viewport={{ once: true }}
             className="w-10/12 md:w-1/3 p-2"
           >
@@ -49,14 +49,20 @@ const Education = () => {
           </motion.div>
         </motion.div>
 
-        <p className="mt-6 font-semibold text-yellow-300">
+        <motion.p
+                    initial={{ y: -25, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.9, delay: 0.3, ease: "easeOut" }}
+                    viewport={{ once: true }}
+        
+        className="mt-6 font-semibold text-yellow-300">
           Throughout my academic journey, I have consistently demonstrated
           excellence in my studies, achieving a perfect GPA at every level.
           Currently, as a CSE student, I am developing a strong foundation in
           programming, data structures, and web development. Passionate about
           technology, I continuously seek opportunities to enhance my skills and
           build innovative projects.It's my hobby to build and do something new.
-        </p>
+        </motion.p>
       </div>
     </div>
   );

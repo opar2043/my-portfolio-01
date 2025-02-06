@@ -46,11 +46,11 @@ const Category = () => {
       </h2>
 
       <motion.div
-        initial={{ x: 200, opacity: 0 }}
-        whileInView={{ x: 0, opacity: 1 }}
-        transition={{ duration: 0.9, delay: 0.3, ease: "easeInOut" }}
+        initial={{ y: 80, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1, delay: 0.2, ease: "easeInOut" }}
         viewport={{ once: true }}
-        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-4"
+        className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-4"
       >
         {websites.map((web, idx) => (
           <div

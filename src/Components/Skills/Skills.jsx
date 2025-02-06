@@ -12,12 +12,12 @@ const Skills = () => {
     <div>
       <Title title={"My Skils"}></Title>
       <motion.div
-                        initial={{ x: -200, opacity: 0 }} 
-                        whileInView={{ x: 0, opacity: 1 }} 
-                        transition={{ duration: 1.1, delay: 0.2, ease: "easeOut" }} 
-                        viewport={{ once: true }}
-      
-      className="flex flex-wrap gap-3 justify-center py-11 md:w-9/12 w-full mx-auto">
+        initial={{ y: 40, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+        viewport={{ once: true }}
+        className="flex flex-wrap gap-3 justify-center py-11 md:w-9/12 w-full mx-auto"
+      >
         <div className="border border-yellow-200 animate__infinite	infinite animate__slow	2s animate__animated animate__bounce  rounded-xl py-3 px-6 flex justify-center items-center gap-1 flex-col hover:bg-yellow-200 hover:text-black">
           <FaHtml5 className="text-5xl text-orange-500 "></FaHtml5>
           <p className="text-lg  font-semibold text-yellow-300">HTML</p>
@@ -172,7 +172,6 @@ const Skills = () => {
           <FaC className="text-5xl text-blue-600"></FaC>
           <p className="text-lg font-semibold text-yellow-300">C</p>
         </motion.div>
-
 
         <div className="border animate__animated animate__headShake animate__infinite animate__slow 3s border-yellow-300 rounded-xl py-3 px-6 flex justify-center items-center gap-1 flex-col">
           <TbBrandCpp className="text-5xl text-blue-600" />
