@@ -13,11 +13,13 @@ const About = () => {
           
           {/* Image Section with Animation */}
           <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }} 
-            animate={{ opacity: 1, scale: 1 }} 
-            transition={{ duration: 0.6 }}
+                  initial={{ x: -200, opacity: 0 }}  // Starts off-screen to the left and invisible
+                  whileInView={{ x: 0, opacity: 1 }} // Moves to position and becomes visible
+                  transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }} // Smooth transition
+                  viewport={{ once: true }} // Animates only once when in view
           >
-            <img 
+            <motion.img 
+
               src={opar} 
               className="rounded-xl shadow-lg border border-gray-700"
               alt="Profile" 
@@ -26,9 +28,10 @@ const About = () => {
 
           {/* Text Section */}
           <motion.div 
-            initial={{ opacity: 0, x: 50 }} 
-            animate={{ opacity: 1, x: 0 }} 
-            transition={{ duration: 0.6 }}
+                  initial={{ x: 200, opacity: 0 }}  // Starts off-screen to the left and invisible
+                  whileInView={{ x: 0, opacity: 1 }} // Moves to position and becomes visible
+                  transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }} // Smooth transition
+                  viewport={{ once: true }} // Animates only once when in view
           >
             <div className="max-w-lg">
               <h2 className="text-3xl font-bold text-yellow-400 sm:text-4xl mb-4">
@@ -46,10 +49,10 @@ const About = () => {
                 
                
               </h2>
-
               <p className="text-gray-300 mb-6">
-                Passionate about building modern web applications with seamless user experiences. I specialize in **React, Tailwind CSS, Node.js, and MongoDB**.
+                Passionate about building modern web applications with seamless user experiences. I specialize in **React, Tailwind CSS, Node.js, and MongoDB**.  I began my programming journey in 2022, but started coding seriously in 2023. Now, I am highly passionate about my work and focused on my vision. I work hard every day to achieve my goals.
               </p>
+
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-lg">
                 <p><span className="text-yellow-400 font-semibold">Name:</span> Rijoan Rashid Opar</p>

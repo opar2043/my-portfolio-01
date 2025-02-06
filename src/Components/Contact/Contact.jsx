@@ -73,7 +73,12 @@ const Contact = () => {
 
           {/* Links  */}
 
-          <div className="flex items-center justify-center gap-3 md:gap-7 text-3xl mt-10">
+          <motion.div
+                         initial={{ x: 200, opacity: 0 }}
+                         whileInView={{ x: 0, opacity: 1 }}
+                         transition={{ duration: 0.9, delay: 0.2, ease: "easeInOut" }}
+                         viewport={{ once: true }}      
+          className="flex items-center justify-center gap-3 md:gap-7 text-3xl mt-10">
             <motion.a
               whileHover={{ scale: 1.1 }}
               transition={{
@@ -91,7 +96,7 @@ const Contact = () => {
                 duration: 0.2,
                 ease: "easeInOut",
               }}
-              href="https://www.linkedin.com/"
+              href="https://www.facebook.com/share/1AY9hw3GT2/"
               className="bg-white p-1 rounded-full"
             >
               <FaFacebook className="text-blue-600"></FaFacebook>
@@ -103,11 +108,13 @@ const Contact = () => {
                 duration: 0.2,
                 ease: "easeInOut",
               }}
-              href="https://www.linkedin.com/"
+              href="https://www.linkedin.com/in/rijoan-rashid-opar-04809a34b/"
               className="bg-white p-1 rounded-full"
             >
               <FaLinkedin className="text-blue-600"></FaLinkedin>
-            </motion.a>
+
+               </motion.a>
+
             <motion.a
               whileHover={{ scale: 1.1 }}
               transition={{
@@ -119,7 +126,7 @@ const Contact = () => {
             >
               <SiGmail className="text-red-500"></SiGmail>
             </motion.a>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

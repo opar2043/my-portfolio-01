@@ -1,4 +1,4 @@
-
+import { motion } from "motion/react";
 import Title from "../Navbar/Title";
 import Lottie from "lottie-react";
 import education from "../../assets/education.json";
@@ -7,8 +7,13 @@ const Education = () => {
     <div className="p-6 bg-gradient-to-t from-black via-slate-950  to-violet-950 rounded-lg shadow-md my-10">
       <Title title="Education " />
       <div className="mt-4 text-lg">
-        <div className="flex flex-col md:flex-row">
-          <div>
+        <motion.div className="flex flex-col md:flex-row">
+          <motion.div
+            initial={{ x: -200, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.9, delay: 0.3, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
             <p>
               <strong>
                 🎓 Bachelor of Science in Computer Science & Engineering (CSE)
@@ -31,12 +36,18 @@ const Education = () => {
               <strong>📚 Junior School Certificate (JSC)</strong>
             </p>
             <p className="pt-2 ">-Year: 2015 | GPA: 5.00</p>
-          </div>
+          </motion.div>
 
-          <div className="w-10/12 md:w-1/3 p-2">
+          <motion.div
+            initial={{ x: 200, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.9, delay: 0.3, ease: "easeOut" }}
+            viewport={{ once: true }}
+            className="w-10/12 md:w-1/3 p-2"
+          >
             <Lottie animationData={education}></Lottie>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         <p className="mt-6 font-semibold text-yellow-300">
           Throughout my academic journey, I have consistently demonstrated

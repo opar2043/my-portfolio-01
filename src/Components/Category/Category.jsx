@@ -1,5 +1,6 @@
 import React from "react";
 import Title from "../Navbar/Title";
+import { motion } from "framer-motion";
 
 const websites = [
   {
@@ -16,9 +17,7 @@ const websites = [
   },
   {
     title: "Matrimonial",
-    image:
-      "https://i.ibb.co.com/rFkdKRw/coupleHd.jpg",
-
+    image: "https://i.ibb.co.com/rFkdKRw/coupleHd.jpg",
   },
   {
     title: "Tech",
@@ -46,23 +45,36 @@ const Category = () => {
         We Can Build Several Project by Your Choice
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <motion.div
+        initial={{ x: 200, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.9, delay: 0.3, ease: "easeInOut" }}
+        viewport={{ once: true }}
+        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-4"
+      >
         {websites.map((web, idx) => (
-          <div key={idx} className="card bg-transparent  shadow-xl border-2 border-yellow-400">
+          <div
+            key={idx}
+            className="card bg-transparent  shadow-xl border-2 border-yellow-400"
+          >
             <figure>
-              <img src={web.image}
-              className="w-full h-52"
-              alt="Shoes" />
+              <img
+                src={web.image}
+                className="w-full h-32 md:h-52"
+                alt="Shoes"
+              />
             </figure>
-            <div className="card-body">
-              <h2 className="card-title flex-col text-yellow-400">
+            <div className="card-body ">
+              <h2 className="card-title text-md md:text-xl flex-col text-center  text-yellow-400">
                 {web.title} Website
-                <div className="badge badge-warning hover:badge-primary">Contact US!</div>
+                <div className="badge badge-warning hover:badge-primary">
+                  Contact US!
+                </div>
               </h2>
             </div>
           </div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };
