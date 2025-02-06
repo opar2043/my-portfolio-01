@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Title from "../Navbar/Title";
 
 const Projects = () => {
@@ -11,6 +11,7 @@ const Projects = () => {
         setProjects(data);
       });
   }, []);
+
   return (
     <div className="my-16 mx-10">
       <Title title={"My Projects"}></Title>
@@ -25,7 +26,7 @@ const Projects = () => {
                   <img
                     src={item?.photo}
                     alt="Movie"
-                    className="h-[200px] bg-cover w-full md:w-[320px] rounded-md"
+                    className="h-[200px] bg-cover w-full  rounded"
                   />
                 </figure>
                 <div className="w-full p-2 flex flex-col gap-1 justify-center items-center ">

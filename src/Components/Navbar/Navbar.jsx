@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import { PiReadCvLogoThin } from "react-icons/pi";
 
+
 const Navbar = () => {
   function handleToast() {
     toast("Wow so easy!");
@@ -36,8 +37,8 @@ const Navbar = () => {
   );
 
   return (
-    <div className=" border-b-2 border-violet-900 pb-1">
-      <div className="navbar bg-transparent  ">
+    <div className=" border-b-2 border-violet-900 pb-2">
+      <div className="navbar bg-transparent  justify-center md:pl-5">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -63,9 +64,13 @@ const Navbar = () => {
               {links}
             </ul>
           </div>
+          <div className="flex items-center gap-1 justify-center">
+          <img src='https://i.ibb.co.com/k64ntGV0/porfolio-logo.png' className=" w-4 md:w-8 rounded-full" />
           <p className="md:text-3xl text-sm font-bold text-yellow-200">
-            Rijoan Rashid Opar
+             Rijoan Rashid Opar
           </p>
+          </div>
+
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal pl-2 gap-1 font-semibold">

@@ -25,7 +25,7 @@ const Education = () => {
             <p className="mt-4">
               <strong>📖 Secondary School Certificate (SSC)</strong>
             </p>
-            <p className="pt-2 ">-Year: 2018 | GPA: 5.00</p>
+            <p className="pt-2 ">- Year: 2018 | GPA: 5.00</p>
 
             <p className="mt-4">
               <strong>📚 Junior School Certificate (JSC)</strong>
