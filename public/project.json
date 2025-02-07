@@ -4,7 +4,7 @@
     "photo": "https://i.ibb.co.com/7x8wjWkM/Annotation-2025-01-31-192257.png",
     "project": "Shaadi.com",
     "name": "Rijoan Rashid Opar",
-    "description": "Full-Stack Developer specializing in React, Tailwind CSS, and Node.js. It's a site where users can find their spouse or soulmate by category. It's a very user-friendly site where I built both user and admin dashboard panels and functionalities.",
+    "description": " It's a site where users can find their spouse or soulmate by category. Shadii.com is a modern matchmaking platform that helps users find their ideal spouse or soulmate based on their preferred category. Designed with user experience in mind, the platform features an intuitive User Dashboard and an Admin Panel for seamless management.",
     "project_link": "https://creative-starship-dcc9e7.netlify.app/",
     "tech": ["React", "Tailwind", "MongoDB", "Node.js"],
     "plan": "in future i will add some new technologies . and will make more user friendly . i will use mongoose in backend and also nodeJs"
@@ -14,7 +14,7 @@
     "photo": "https://i.ibb.co.com/84XHnpFz/assignment.jpg",
     "project": "Assignment Crub",
     "name": "Rijoan Rashid Opar",
-    "description": "Frontend Developer with expertise in React, MongoDB, and modern CSS frameworks. This is a website where you can create your own assignments. Students can submit their assignments, and teachers can grade them. It's a well-designed and beneficial website.",
+    "description": " The Assignment Submission Platform is a user-friendly web application designed for teachers and students. It allows teachers to create assignments, students to submit their work, and teachers to grade submissions efficiently. This platform enhances the online learning experience with a structured and intuitive interface.",
     "project_link": "https://teal-meerkat-08607f.netlify.app",
     "tech": ["React", "Tailwind", "MongoDB", "express js", "firebase"],
     "plan": "in future i will add some new technologies . and will make more user friendly . i will use mongoose in backend and also nodeJs. Thogh this is not complete i will add admin dashboard where a teacher give and take marks to all."
@@ -24,7 +24,7 @@
     "photo": "https://i.ibb.co.com/4Zm5SLjf/crowdcube.jpg",
     "project": "Crowed Cube Ideas",
     "name": "Rijoan Rashid Opar",
-    "description": "Backend Engineer experienced in Node.js, Express, and MongoDB. People can share their ideas, build good communication with others, and help start-ups by providing proper knowledge.",
+    "description": "Crowd Cube is a web application designed for creative minds to share ideas and donate money to support new businesses and innovative projects. This platform connects aspiring entrepreneurs with supporters who believe in their vision. People can share their ideas, build good communication with others, and help start-ups by providing proper knowledge.",
     "project_link": "https://gilded-twilight-2a1954.netlify.app/",
     "tech": ["React", "Tailwind", "MongoDB", "Node.js", "firebase"],
     "plan": "in future i will add some new technologies . and will make more user friendly . add some more new features and make good design. i will use some more liabrary"
@@ -34,7 +34,7 @@
     "photo": "https://i.ibb.co.com/ynmjm0Hc/recipe.jpg",
     "project": "Verity Restaurant Project",
     "name": "Rijoan Rashid Opar",
-    "description": "Backend Engineer experienced in Node.js, Express, and MongoDB. This website allows users to add, delete, and modify their recipes. Customers can also place orders and pay their bills online.",
+    "description": "Verity Restaurant Project is an online food ordering platform where users can browse, order, and pay for their favorite dishes. The project features a user-friendly dashboard for customers and an admin panel to manage orders, menu items, and payments. This website allows users to add, delete, and modify their recipes. Customers can also place orders and pay their bills online.",
     "project_link": "https://vocal-cranachan-4eceb2.netlify.app",
     "tech": ["React", "Tailwind", "MongoDB", "express js", "firebase"],
     "plan": "in future i will add some new technologies . and will make more user friendly . Make The web site more faster and user friendly.Thogh the payment is not intigrated i will add this featuries also"

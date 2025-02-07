@@ -30,11 +30,11 @@ const ProDetail = () => {
 
   return (
     <div className="absolute inset-0 -z-10  text-white w-full items-center [background:radial-gradient(135%_135%_at_55%_15%,#000_43%,#63e_105%)]  mx-auto h-screen">
-      <div className="card lg:card-side my-16 w-11/12 mx-auto rounded-xl  shadow-xl gap-1">
+      <div className="card lg:card-side my-16 w-11/12 mx-auto rounded-xl  shadow-xl ">
         <figure>
           <img src={photo} alt="Album" className="h-full" />
         </figure>
-        <div className="card-body flex flex-col gap-2 rounded-r-3xl border-y-2 border-r-2 border-yellow-300">
+        <div className="card-body flex flex-col gap-2 rounded-r-3xl  border-2 border-yellow-300">
         <h2 className="card-title text-4xl font-extrabold text-yellow-300 tracking-wide">{project}</h2>
       <p className="text-lg font-semibold text-violet-200">{name} (Owner) </p>
       <p className="text-sm leading-relaxed opacity-90">

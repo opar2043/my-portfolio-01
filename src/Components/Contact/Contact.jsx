@@ -11,12 +11,13 @@ const Contact = () => {
       <div>
         <div className="flex flex-col md:flex-row gap-3 justify-center items-center">
           <motion.div
-                        initial={{ x: -20, opacity: 0 }}
-                        whileInView={{ y: 0, opacity: 1 }}
-                        transition={{ duration: 0.9, delay: 0.2, ease: "easeInOut" }}
-                        viewport={{ once: true }}
-          className="md:w-2/3 w-full p-8  lg:col-span-3 lg:p-12">
-            <form action="#" className="space-y-4 w-full">
+            initial={{ x: -20, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: "easeInOut" }}
+            viewport={{ once: true }}
+            className="md:w-2/3 w-full p-8  lg:col-span-3 lg:p-12"
+          >
+            <form action="#" className="space-y-4 w-full  ">
               <div>
                 <label className="sr-only" htmlFor="name">
                   Name
@@ -79,25 +80,33 @@ const Contact = () => {
 
             {/* Links  */}
 
-            <motion.div
+            <motion.div className="flex items-center justify-center gap-3 md:gap-7 text-3xl mt-10"></motion.div>
 
-              className="flex items-center justify-center gap-3 md:gap-7 text-3xl mt-10"
-            ></motion.div>
-          </motion.div>
+
+          </motion.div> 
 
           <motion.div
-                        initial={{ x: 20, opacity: 0 }}
-                        whileInView={{ x: 0, opacity: 1 }}
-                        transition={{ duration: 0.9, delay: 0.2, ease: "easeInOut" }}
-                        viewport={{ once: true }}
-          className="md:w-1/3 px-5 py-6 w-full bg-white/10 backdrop-blur-lg rounded-xl  shadow-lg border border-yellow-300">
+            // initial={{ x: 20, opacity: 0 }}
+            // whileInView={{ x: 0, opacity: 1 }}
+            // transition={{ duration: 0.9, delay: 0.2, ease: "easeInOut" }}
+            // viewport={{ once: true }}
+            className="md:w-1/3 px-5 py-6 w-full bg-white/10 backdrop-blur-lg rounded-xl  shadow-lg border border-yellow-300"
+          >
             {/* Headline */}
             <h2 className="text-center text-2xl border-b-2 border-yellow-400 pb-3 font-bold text-yellow-300 mb-6 uppercase tracking-widest">
               Social Links
             </h2>
 
             {/* Facebook */}
-            <div className="flex items-center justify-between gap-4 bg-gradient-to-r from-yellow-200 to-yellow-400 py-3 px-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+
+            <motion.a
+              initial={{ y: -10, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.3, ease: "easeInOut" }}
+              viewport={{ once: true }}
+              href="https://www.facebook.com/share/1AY9hw3GT2/"
+              className="flex items-center justify-between gap-4 bg-gradient-to-r from-yellow-200 to-yellow-400 py-3 px-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+            >
               <span className="text-black font-semibold text-lg flex items-center gap-2">
                 <FaFacebook className="text-blue-600 text-2xl" /> Facebook
               </span>
@@ -109,10 +118,17 @@ const Contact = () => {
               >
                 <FaFacebook className="text-blue-600 text-xl" />
               </motion.a>
-            </div>
+            </motion.a>
 
             {/* GitHub */}
-            <div className="flex items-center justify-between gap-4 mt-4 bg-gradient-to-r from-gray-800 to-gray-900 py-3 px-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+            <motion.a
+              initial={{ y: -10, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.5, ease: "easeInOut" }}
+              viewport={{ once: true }}
+              href="https://github.com/opar2043"
+              className="flex items-center justify-between gap-4 mt-4 bg-gradient-to-r from-gray-800 to-gray-900 py-3 px-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+            >
               <span className="text-white font-semibold text-lg flex items-center gap-2">
                 <FaGithub className="text-white text-2xl" /> GitHub
               </span>
@@ -124,10 +140,17 @@ const Contact = () => {
               >
                 <FaGithub className="text-black text-xl" />
               </motion.a>
-            </div>
+            </motion.a>
 
             {/* Gmail */}
-            <div className="flex items-center justify-between gap-4 mt-4 bg-gradient-to-r from-red-200 to-red-400 py-3 px-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+            <motion.a
+              initial={{ y: -10, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.7, ease: "easeInOut" }}
+              viewport={{ once: true }}
+              href="https://mail.google.com/mail/u/0/#inbox"
+              className="flex items-center justify-between gap-4 mt-4 bg-gradient-to-r from-red-200 to-red-400 py-3 px-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+            >
               <span className="text-black font-semibold text-lg flex items-center gap-2">
                 <SiGmail className="text-red-500 text-2xl" /> G-Mail
               </span>
@@ -139,10 +162,17 @@ const Contact = () => {
               >
                 <SiGmail className="text-red-500 text-xl" />
               </motion.a>
-            </div>
+            </motion.a>
 
             {/* LinkedIn */}
-            <div className="flex items-center justify-between gap-4 mt-4 bg-gradient-to-r from-blue-200 to-blue-400 py-3 px-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+            <motion.a
+              initial={{ y: -10, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.9, ease: "easeInOut" }}
+              viewport={{ once: true }}
+              href="https://www.linkedin.com/in/rijoan-rashid-opar-04809a34b/"
+              className="flex items-center justify-between gap-4 mt-4 bg-gradient-to-r from-blue-200 to-blue-400 py-3 px-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+            >
               <span className="text-black font-semibold text-lg flex items-center gap-2">
                 <FaLinkedin className="text-blue-600 text-2xl" /> LinkedIn
               </span>
@@ -154,10 +184,17 @@ const Contact = () => {
               >
                 <FaLinkedin className="text-blue-600 text-xl" />
               </motion.a>
-            </div>
+            </motion.a>
 
             {/* WhatsApp */}
-            <div className="flex items-center justify-between gap-4 mt-4 bg-gradient-to-r from-green-200 to-green-400 py-3 px-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+            <motion.a
+              initial={{ y: -10, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8, delay: 1, ease: "easeInOut" }}
+              viewport={{ once: true }}
+              href="https://wa.me/qr/7FADY5JLDLSMB1"
+              className="flex items-center justify-between gap-4 mt-4 bg-gradient-to-r from-green-200 to-green-400 py-3 px-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+            >
               <span className="text-black font-semibold text-lg flex items-center gap-2">
                 <FaWhatsapp className="text-green-500 text-2xl" /> WhatsApp
               </span>
@@ -169,7 +206,7 @@ const Contact = () => {
               >
                 <FaWhatsapp className="text-green-500 text-xl" />
               </motion.a>
-            </div>
+            </motion.a>
           </motion.div>
         </div>
       </div>
