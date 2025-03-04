@@ -78,12 +78,12 @@ const Contact = () => {
               </div>
             </form>
 
+            <img src="" alt="" />
+
             {/* Links  */}
 
             <motion.div className="flex items-center justify-center gap-3 md:gap-7 text-3xl mt-10"></motion.div>
-
-
-          </motion.div> 
+          </motion.div>
 
           <motion.div
             // initial={{ x: 20, opacity: 0 }}

@@ -52,7 +52,7 @@ const Home = () => {
               applications. I thrive on creating seamless digital experiences
               and staying updated with the latest web technologies.
             </p>
-            <a href="https://drive.google.com/file/d/172Q_e5CaXHOKCp7iiAa9B_D9n3EOyURC/view">
+            <a href="https://drive.google.com/file/d/17Efn-aAmAK6OCB6EuU7aRS-I-5sHJHTD/view?usp=drive_link">
               <motion.button
                 whileHover={{ scale: 1.1 }}
                 transition={{
@@ -62,7 +62,7 @@ const Home = () => {
                 className="btn btn-primary"
               >
                 {" "}
-                <FaBookOpenReader></FaBookOpenReader> Download Resume
+                <FaBookOpenReader></FaBookOpenReader> Certificate
               </motion.button>
             </a>
           </motion.div>
