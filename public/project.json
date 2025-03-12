@@ -4,6 +4,7 @@
     "photo": "https://i.ibb.co.com/7x8wjWkM/Annotation-2025-01-31-192257.png",
     "project": "Shaadi.com",
     "name": "Rijoan Rashid Opar",
+    "github": "https://github.com/opar2043/matrimonial-website.git",
     "description": " It's a site where users can find their spouse or soulmate by category. Shadii.com is a modern matchmaking platform that helps users find their ideal spouse or soulmate based on their preferred category. Designed with user experience in mind, the platform features an intuitive User Dashboard and an Admin Panel for seamless management.",
     "project_link": "https://creative-starship-dcc9e7.netlify.app/",
     "tech": ["React", "Tailwind", "MongoDB", "Node.js"],
@@ -14,6 +15,7 @@
     "photo": "https://i.ibb.co.com/84XHnpFz/assignment.jpg",
     "project": "Assignment Crub",
     "name": "Rijoan Rashid Opar",
+    "github": "https://github.com/opar2043/create-assignment-web.git",
     "description": " The Assignment Submission Platform is a user-friendly web application designed for teachers and students. It allows teachers to create assignments, students to submit their work, and teachers to grade submissions efficiently. This platform enhances the online learning experience with a structured and intuitive interface.",
     "project_link": "https://teal-meerkat-08607f.netlify.app",
     "tech": ["React", "Tailwind", "MongoDB", "express js", "firebase"],
@@ -24,6 +26,7 @@
     "photo": "https://i.ibb.co.com/4Zm5SLjf/crowdcube.jpg",
     "project": "Crowed Cube Ideas",
     "name": "Rijoan Rashid Opar",
+    "github": "https://github.com/opar2043/mongo-campgain-idea-s-web.git",
     "description": "Crowd Cube is a web application designed for creative minds to share ideas and donate money to support new businesses and innovative projects. This platform connects aspiring entrepreneurs with supporters who believe in their vision. People can share their ideas, build good communication with others, and help start-ups by providing proper knowledge.",
     "project_link": "https://gilded-twilight-2a1954.netlify.app/",
     "tech": ["React", "Tailwind", "MongoDB", "Node.js", "firebase"],
@@ -34,6 +37,7 @@
     "photo": "https://i.ibb.co.com/ynmjm0Hc/recipe.jpg",
     "project": "Verity Restaurant Project",
     "name": "Rijoan Rashid Opar",
+    "github": "https://github.com/opar2043/Verity-Restaurent-project-.git",
     "description": "Verity Restaurant Project is an online food ordering platform where users can browse, order, and pay for their favorite dishes. The project features a user-friendly dashboard for customers and an admin panel to manage orders, menu items, and payments. This website allows users to add, delete, and modify their recipes. Customers can also place orders and pay their bills online.",
     "project_link": "https://vocal-cranachan-4eceb2.netlify.app",
     "tech": ["React", "Tailwind", "MongoDB", "express js", "firebase"],
@@ -44,9 +48,21 @@
     "photo": "https://i.ibb.co.com/JWvvKsZf/gadjet-heaven.jpg",
     "project": "Gadget Heaven",
     "name": "Rijoan Rashid Opar",
+    "github": "https://github.com/opar2043/Gadjet-Heaven.git",
     "description": "A simple digital gadget website built using React technologies. Users can easily browse and purchase their desired gadgets. The site is built with React, Tailwind, and other supporting technologies.",
     "project_link": "https://stellar-narwhal-c69347.netlify.app/",
     "tech": ["React", "Tailwind"],
     "plan": "in future i will add some new technologies . and will make more user friendly . i will use mongoose in backend and also nodeJs"
+  },
+  {
+    "id": 6,
+    "photo": "https://i.ibb.co.com/SwYz9Hww/e-shoping.jpg",
+    "project": "E-Shopping",
+    "github": "https://github.com/opar2043/E-Shopping.git",
+    "name": "Rijoan Rashid Opar",
+    "description": "E-Shopping is a full-stack e-commerce platform where users can buy and sell products seamlessly. The platform features user and admin roles, ensuring a smooth and secure experience for all users. Built with modern web technologies, E-Shopping delivers fast performance and real-time functionality.Thogh its a running project .",
+    "project_link": "https://vermillion-salmiakki-80f712.netlify.app/",
+    "tech": ["React", "Tailwind", "MongoDB", "Node.js", "firebase", "express-js"],
+    "plan": "In future i will add some new technologies and new components which will make more user friendly."
   }
 ]
