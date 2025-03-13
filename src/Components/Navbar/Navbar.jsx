@@ -18,24 +18,52 @@ const Navbar = () => {
 
   const links = (
     <>
-<NavLink onClick={() => handleLinkClick("home")}> 
+      <NavLink onClick={() => handleLinkClick("home")}>
         <li>
-          <a href="#" className={`${activeLink === "home" ? "bg-yellow-400 text-black" : ""} px-2 py-1 rounded-md`}>Home</a>
+          <a
+            href="#"
+            className={`${
+              activeLink === "home" ? "bg-yellow-400 text-black" : ""
+            } px-2 py-1 rounded-md`}
+          >
+            Home
+          </a>
         </li>
       </NavLink>
-      <NavLink onClick={() => handleLinkClick("about")}> 
+      <NavLink onClick={() => handleLinkClick("about")}>
         <li>
-          <a href="#about" className={`${activeLink === "about" ? "bg-yellow-400 text-black" : ""} px-2 py-1 rounded-md`}>About</a>
+          <a
+            href="#about"
+            className={`${
+              activeLink === "about" ? "bg-yellow-400 text-black" : ""
+            } px-2 py-1 rounded-md`}
+          >
+            About
+          </a>
         </li>
       </NavLink>
-      <NavLink onClick={() => handleLinkClick("contact")}> 
+      <NavLink onClick={() => handleLinkClick("contact")}>
         <li>
-          <a href="#contact" className={`${activeLink === "contact" ? "bg-yellow-400 text-black" : ""} px-2 py-1 rounded-md`}>Contact</a>
+          <a
+            href="#contact"
+            className={`${
+              activeLink === "contact" ? "bg-yellow-400 text-black" : ""
+            } px-2 py-1 rounded-md`}
+          >
+            Contact
+          </a>
         </li>
       </NavLink>
-      <NavLink onClick={() => handleLinkClick("projects")}> 
+      <NavLink onClick={() => handleLinkClick("projects")}>
         <li>
-          <a href="#projects" className={`${activeLink === "projects" ? "bg-yellow-400 text-black" : ""} px-2 py-1 rounded-md`}>Projects</a>
+          <a
+            href="#projects"
+            className={`${
+              activeLink === "projects" ? "bg-yellow-400 text-black" : ""
+            } px-2 py-1 rounded-md`}
+          >
+            Projects
+          </a>
         </li>
       </NavLink>
     </>
@@ -87,11 +115,8 @@ const Navbar = () => {
         </div>
 
         <div className="navbar-end flex items-center space-x-4">
-          <a href="https://drive.google.com/file/d/10K7XjFkJX8mAYD6GXzCYU6kefoTH3FOG/view?usp=sharing">
-            <button
-              
-              className="py-2 px-4 md:px-6 flex items-center gap-2 rounded-md text-sm font-semibold bg-gradient-to-r from-violet-600 to-violet-900 hover:from-yellow-300 hover:to-yellow-600 hover:text-black"
-            >
+          <a href="https://drive.google.com/file/d/10K7XjFkJX8mAYD6GXzCYU6kefoTH3FOG/view?usp=drive_link">
+            <button className="py-2 px-4 md:px-6 flex items-center gap-2 rounded-md text-sm font-semibold bg-gradient-to-r from-violet-600 to-violet-900 hover:from-yellow-300 hover:to-yellow-600 hover:text-black">
               <PiReadCvLogoThin className="text-lg" /> Resume
             </button>
           </a>
