@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import opar from "../../assets/gallery.jpg";
+import opar from "../../assets/opar2.jpg";
 import Title from "../Navbar/Title";
 import { Typewriter } from "react-simple-typewriter";
 
@@ -22,8 +22,9 @@ const About = () => {
           >
             <motion.img
               src={opar}
-              className="rounded-xl shadow-lg border border-gray-700"
-              alt="Profile"
+             
+              className="rounded-xl shadow-lg border border-gray-700 "
+              alt="Profile img"
             />
           </motion.div>
 

@@ -60,7 +60,7 @@ const Category = () => {
             <figure>
               <img
                 src={web.image}
-                className="w-full h-32 md:h-52"
+                className="w-full h-32 md:h-52 "
                 alt="Shoes"
               />
             </figure>

@@ -6,69 +6,25 @@ import { PiReadCvLogoThin } from "react-icons/pi";
 import { useState } from "react";
 
 const Navbar = () => {
-  const [activeLink, setActiveLink] = useState(null);
-
-  function handleToast() {
-    toast("Wow so easy!");
-  }
-
-  const handleLinkClick = (link) => {
-    setActiveLink(link);
-  };
 
   const links = (
     <>
-      <NavLink onClick={() => handleLinkClick("home")}>
-        <li>
-          <a
-            href="#"
-            className={`${
-              activeLink === "home" ? "bg-yellow-400 text-black" : ""
-            } px-2 py-1 rounded-md`}
-          >
-            Home
-          </a>
-        </li>
+      <NavLink>
+        <li className="px-2 py-1 rounded-md">Home</li>
       </NavLink>
-      <NavLink onClick={() => handleLinkClick("about")}>
-        <li>
-          <a
-            href="#about"
-            className={`${
-              activeLink === "about" ? "bg-yellow-400 text-black" : ""
-            } px-2 py-1 rounded-md`}
-          >
-            About
-          </a>
-        </li>
+      <NavLink>
+        <li className="px-2 py-1 rounded-md">About</li>
       </NavLink>
-      <NavLink onClick={() => handleLinkClick("contact")}>
-        <li>
-          <a
-            href="#contact"
-            className={`${
-              activeLink === "contact" ? "bg-yellow-400 text-black" : ""
-            } px-2 py-1 rounded-md`}
-          >
-            Contact
-          </a>
-        </li>
+      <NavLink>
+        <li className="px-2 py-1 rounded-md">Contact</li>
       </NavLink>
-      <NavLink onClick={() => handleLinkClick("projects")}>
-        <li>
-          <a
-            href="#projects"
-            className={`${
-              activeLink === "projects" ? "bg-yellow-400 text-black" : ""
-            } px-2 py-1 rounded-md`}
-          >
-            Projects
-          </a>
-        </li>
+      <NavLink>
+        <li className="px-2 py-1 rounded-md">Projects</li>
       </NavLink>
     </>
   );
-
+  
+  
   return (
     <div className="fixed top-0 left-0 w-full  shadow-md z-50 border-b-2 bg-violet-500/25 border-violet-900">
       <div className="navbar bg-transparent justify-between px-4 md:px-8">

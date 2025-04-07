@@ -9,8 +9,8 @@
 
 @plugin "daisyui";
 
-li a.active{
-  color: yellow;
+a.active{
+  
 }
 
 :root {

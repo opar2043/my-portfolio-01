@@ -1,8 +1,0 @@
-:hover.active {
-    background-color: violet ;
-    color: white;
-    border-radius: 8px;
-    font: 800;
-    
-    transition: border-bottom 0.3s ease-in-out, transform 0.4s ease-in-out;
-}
