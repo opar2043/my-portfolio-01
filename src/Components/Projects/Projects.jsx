@@ -79,7 +79,7 @@ const Projects = () => {
   // console.log(projects);
 
   return (
-    <div className="my-16 mx-10">
+    <div id="project" className="my-16 mx-10">
       <Title title={"My Projects"}></Title>
 
       <motion.div

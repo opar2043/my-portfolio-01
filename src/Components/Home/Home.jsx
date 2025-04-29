@@ -8,7 +8,7 @@ import { animate } from "motion";
 
 const Home = () => {
   return (
-    <div className="mt-20">
+    <div id="home" className="mt-20">
       <div className="hero min-h-screen">
         <div className="hero-content flex-col gap-10 lg:flex-row-reverse">
           {/* Image Serction */}

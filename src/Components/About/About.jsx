@@ -5,7 +5,7 @@ import { Typewriter } from "react-simple-typewriter";
 
 const About = () => {
   return (
-    <div className="bg-transparent rounded-xl bg-gradient-to-t from-black via-slate-950  to-violet-950 text-white py-5 md:py-16 my-5 md:my-14">
+    <div id="about" className="bg-transparent rounded-xl bg-gradient-to-t from-black via-slate-950  to-violet-950 text-white py-5 md:py-16 my-5 md:my-14">
       <Title title={"About Me"}></Title>
 
       <section

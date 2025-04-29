@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { AlertTriangle } from "lucide-react";
+
 
 const Error = () => {
   const navigate = useNavigate();
@@ -9,7 +9,7 @@ const Error = () => {
     <div className="min-h-screen bg-gradient-to-br from-pink-500 to-blue-500 flex items-center justify-center p-4">
       <div className="bg-white shadow-2xl rounded-2xl p-8 md:p-16 text-center max-w-md w-full">
         <div className="flex justify-center mb-4">
-          <AlertTriangle className="text-red-500 w-16 h-16" />
+          
         </div>
         <h1 className="text-3xl font-bold text-gray-800 mb-2">Oops! Something went wrong.</h1>
         <p className="text-gray-600 mb-6">We couldn't find the page you're looking for. Please try again or go back to the homepage.</p>

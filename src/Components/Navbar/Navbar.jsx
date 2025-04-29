@@ -6,25 +6,35 @@ import { PiReadCvLogoThin } from "react-icons/pi";
 import { useState } from "react";
 
 const Navbar = () => {
-
   const links = (
     <>
-      <NavLink>
-        <li className="px-2 py-1 rounded-md">Home</li>
-      </NavLink>
-      <NavLink>
-        <li className="px-2 py-1 rounded-md">About</li>
-      </NavLink>
-      <NavLink>
-        <li className="px-2 py-1 rounded-md">Contact</li>
-      </NavLink>
-      <NavLink>
-        <li className="px-2 py-1 rounded-md">Projects</li>
-      </NavLink>
+
+
+      <li className=" py-1 rounded-md">
+        <a href="#home">Home</a>
+      </li>
+
+      <li className="py-1 rounded-md">
+        <a href="#about">About</a>
+      </li>
+
+      <li className=" py-1 rounded-md">
+        <a href="#contact">Contact</a>
+      </li>
+
+      <li className=" py-1 rounded-md">
+        <a href="#project">Projects</a>
+      </li>
+
+      <li className=" py-1 rounded-md">
+        <a href="#edu">Education</a>
+      </li>
+      <li className=" py-1 rounded-md">
+        <a href="#skill">Skills</a>
+      </li>
     </>
   );
-  
-  
+
   return (
     <div className="fixed top-0 left-0 w-full  shadow-md z-50 border-b-2 bg-violet-500/25 border-violet-900">
       <div className="navbar bg-transparent justify-between px-4 md:px-8">
@@ -48,7 +58,7 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content font-semibold text-black bg-yellow-300 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              className="menu menu-sm  dropdown-content font-semibold text-black bg-yellow-300 rounded-box z-[1] mt-3 w-52 p-2 shadow"
             >
               {links}
             </ul>
@@ -65,7 +75,7 @@ const Navbar = () => {
         </div>
 
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal space-x-4 font-semibold">
+          <ul className="menu menu-horizontal space-x-1 font-semibold">
             {links}
           </ul>
         </div>

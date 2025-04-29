@@ -9,7 +9,7 @@ import { motion } from "motion/react";
 
 const Skills = () => {
   return (
-    <div>
+    <div id="skill">
       <Title title={"My Skils"}></Title>
       <motion.div
         initial={{ y: 40, opacity: 0 }}

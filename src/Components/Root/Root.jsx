@@ -26,7 +26,7 @@ const Root = () => {
       </div>
       <button
         onClick={() => document.getElementById("my_modal_3").showModal()}
-        className="md:p-4 p-3 bg-gradient-to-t from-violet-500 to-violet-950 border-0  rounded-full fixed  md:bottom-20 bottom-16 right-14 md:right-20"
+        className="md:p-4 p-3 bg-gradient-to-t from-violet-500 to-violet-950 border-0  rounded-full fixed   bottom-14 right-9 "
       >
         <FaHeadset></FaHeadset>
       </button>

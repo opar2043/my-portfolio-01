@@ -4,7 +4,7 @@ import Lottie from "lottie-react";
 import education from "../../assets/education.json";
 const Education = () => {
   return (
-    <div className="p-6 bg-gradient-to-t from-black via-slate-950  to-violet-950 rounded-lg shadow-md my-10">
+    <div id="edu" className="p-6 bg-gradient-to-t from-black via-slate-950  to-violet-950 rounded-lg shadow-md my-10">
       <Title title="Education " />
       <div className="mt-4 text-lg">
         <motion.div className="flex flex-col md:flex-row">

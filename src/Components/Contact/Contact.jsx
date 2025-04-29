@@ -7,7 +7,7 @@ import Passion from "./Passion";
 
 const Contact = () => {
   return (
-    <div className="my-10 border-2 border-yellow-500 p-3 shadow-2xl rounded-xl">
+    <div id="contact" className="my-10 border-2 border-yellow-500 p-3 shadow-2xl rounded-xl">
       <Title title={"Reach Me"}></Title>
 
       <div>
