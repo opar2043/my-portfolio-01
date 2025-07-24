@@ -81,7 +81,7 @@ const Projects = () => {
 
   return (
     <div id="project" className="my-16 mx-10">
-      <Title head={"My"} head2={'Projects'}></Title>
+      <Title head={"My"} head2={"Projects"}></Title>
 
       <motion.div
         initial={{ y: 50, opacity: 0 }}
@@ -91,15 +91,17 @@ const Projects = () => {
         className="grid grid-cols-1 md:grid-cols-4 gap-4 h-full my-8"
       >
         {projects &&
-          projects.slice(0,4).map((item, idx) => (
-                    <Card key={idx} item={item}></Card>
-          ))}
+          projects
+            .slice(0, 4)
+            .map((item, idx) => <Card key={idx} item={item}></Card>)}
       </motion.div>
 
       <div className="flex justify-center items-center">
-<Link>
-           <button className="rounded font-semibold text-black bg-gradient-to-r from-yellow-300 to-yellow-600 btn shadow-md hover:scale-110 transition-transform duration-300">Show All Projects</button>
-</Link>
+        <Link to={"/allprojects"}>
+          <button className="rounded font-semibold text-black bg-gradient-to-r from-yellow-300 to-yellow-600 btn shadow-md hover:scale-110 transition-transform duration-300">
+            Show All Projects
+          </button>
+        </Link>
       </div>
     </div>
   );

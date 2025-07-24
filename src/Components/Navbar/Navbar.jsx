@@ -1,6 +1,6 @@
 import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import { PiReadCvLogoThin } from "react-icons/pi";
 import { useState } from "react";
@@ -8,11 +8,11 @@ import { useState } from "react";
 const Navbar = () => {
   const links = (
     <>
-
-
-      <li className=" py-1 rounded-md">
-        <a href="#home">Home</a>
-      </li>
+      <Link to={"/"}>
+        <li className=" py-1 rounded-md">
+          <a href="#home">Home</a>
+        </li>
+      </Link>
 
       <li className="py-1 rounded-md">
         <a href="#about">About</a>

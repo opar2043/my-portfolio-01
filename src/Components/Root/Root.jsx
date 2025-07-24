@@ -11,6 +11,7 @@ import { FaLocationArrow } from "react-icons/fa";
 import { FaHeadset } from "react-icons/fa6";
 import { useState } from "react";
 import axios from "axios";
+import { Outlet } from "react-router-dom";
 
 const Root = () => {
   const [qus, setQus] = useState("");
@@ -35,67 +36,26 @@ const Root = () => {
       },
     });
 
-    // console.log(res?.data?.candidates[0]?.content.parts[0].text);
     setAns(res?.data?.candidates[0]?.content.parts[0].text);
 
     e.target.reset();
   }
 
-  // async function handleChatBot(e) {
-  //   e.preventDefault();
-  //   setAns("Loading...");
-
-  //   try {
-  //     const res = await axios({
-  //       url: "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyAq8OKuujcz5YoEqXD0Z6G1f4dg0OX5FDY",
-  //       method: "POST",
-  //       data: {
-  //         contents: [
-  //           {
-  //             role: "system",
-  //             parts: [
-  //               {
-  //                 text: `You are a helpful chatbot built by Rijoan Rashid, a frontend React developer from Bangladesh.
-  // You help users learn more about Rijoan’s skills, background, and projects.
-  // Answer questions like "What is your name?", "Who built you?", or "Where are you from?" based on this.`,
-  //               },
-  //             ],
-  //           },
-  //           {
-  //             role: "user",
-  //             parts: [
-  //               {
-  //                 text: qus,
-  //               },
-  //             ],
-  //           },
-  //         ],
-  //       },
-  //     });
-
-  //     const answer = res?.data?.candidates?.[0]?.content?.parts?.[0]?.text || "No answer found.";
-  //     setAns(answer);
-  //   } catch (err) {
-  //     console.error(err);
-  //     setAns("Sorry, something went wrong.");
-  //   }
-
-  //   e.target.reset();
-  // }
-
   return (
     <div className="absolute inset-0 -z-10 max-h-fit text-white w-full items-center [background:radial-gradient(135%_135%_at_55%_15%,#000_43%,#63e_105%)]  mx-auto ">
       <Navbar></Navbar>
 
-      <div className="md:px-10 px-4">
-        <Home />
+      <div className="w-full max-w-8xl md:w-11/12 mx-auto px-4 md:px-8">
+        {/* <Home />
         <About />
         <Education />
+        <Projects />
         <Skills />
         <Category />
-        <Projects />
-        <Contact />
+        <Contact /> */}
+        <Outlet></Outlet>
       </div>
+
       <button
         onClick={() => document.getElementById("my_modal_3").showModal()}
         className="md:p-4 p-3 bg-gradient-to-t from-violet-500 to-violet-950 border-0  rounded-full fixed   bottom-14 right-9 "

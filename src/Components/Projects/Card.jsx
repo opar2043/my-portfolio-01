@@ -7,7 +7,7 @@ const Card = ({ item }) => {
   return (
     <div>
       <div className="rounded-md">
-        <div className="flex flex-col rounded-md gap-1 shadow-md border border-yellow-300 bg-transparent hover:shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1">
+        <div className="flex flex-col rounded-md gap-1 shadow-md border border-yellow-300 bg-transparent hover:shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1 ">
           <figure>
             <img
               src={item?.photo}
