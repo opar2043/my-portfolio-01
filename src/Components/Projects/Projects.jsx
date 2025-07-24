@@ -6,6 +6,7 @@ import { FaCircleInfo, FaGithub } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
 import { motion } from "framer-motion";
+import Card from "./Card";
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
@@ -80,66 +81,26 @@ const Projects = () => {
 
   return (
     <div id="project" className="my-16 mx-10">
-      <Title title={"My Projects"}></Title>
+      <Title head={"My"} head2={'Projects'}></Title>
 
       <motion.div
         initial={{ y: 50, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 1, delay: 0.2, ease: "easeInOut" }}
         viewport={{ once: true }}
-        className="grid grid-cols-1 md:grid-cols-3 gap-4 h-full my-8"
+        className="grid grid-cols-1 md:grid-cols-4 gap-4 h-full my-8"
       >
         {projects &&
-          projects.map((item, idx) => (
-            <div key={idx} className="rounded-md">
-              <div className="flex flex-col rounded-md gap-1 shadow-md border border-yellow-300 bg-transparent hover:shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1">
-                <figure>
-                  <img
-                    src={item?.photo}
-                    alt="Project"
-                    className="h-[200px] w-full object-cover rounded-t-md"
-                  />
-                </figure>
-                <div className="w-full p-4 flex flex-col gap-2 justify-center items-center">
-                  <h2 className="text-yellow-400 font-extrabold md:text-2xl text-xl text-center">
-                    {item?.project}
-                  </h2>
-
-                  <div className="my-4 flex gap-6">
-                    {/* Live Button Section */}
-                    <div className="flex flex-col items-center justify-center gap-1">
-                      <a
-                        href={item?.project_link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <button className="p-3 rounded-full bg-gradient-to-r from-yellow-300 to-yellow-600 text-white shadow-md hover:scale-110 transition-transform duration-300">
-                          <FaBookOpen className="text-xl text-yellow-900" />
-                        </button>
-                      </a>
-                      <p className="font-semibold text-yellow-400 text-sm mt-1">
-                        Live Demo
-                      </p>
-                    </div>
-
-
-                    {/* Details Button Section */}
-                    <div className="flex flex-col items-center justify-center gap-1">
-                      <Link to={`/detail/${item?.id}`}>
-                        <button className="p-3 rounded-full bg-gradient-to-r from-yellow-300 to-yellow-600 hover:bg-violet-500 hover:text-white shadow-md transition-colors duration-300">
-                          <FaCircleInfo className="text-xl text-yellow-900" />
-                        </button>
-                      </Link>
-                      <p className="font-semibold text-yellow-400 text-sm mt-1">
-                        Details
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          projects.slice(0,4).map((item, idx) => (
+                    <Card key={idx} item={item}></Card>
           ))}
       </motion.div>
+
+      <div className="flex justify-center items-center">
+<Link>
+           <button className="rounded font-semibold text-black bg-gradient-to-r from-yellow-300 to-yellow-600 btn shadow-md hover:scale-110 transition-transform duration-300">Show All Projects</button>
+</Link>
+      </div>
     </div>
   );
 };

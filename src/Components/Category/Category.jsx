@@ -40,7 +40,7 @@ const websites = [
 const Category = () => {
   return (
     <div id="category">
-      <Title title={"Service"}></Title>
+      <Title head={"Service"}></Title>
       <h2 className="text-center text-lg font-semibold my-6 text-yellow-300">
         We Can Build Several Project by Your Choice
       </h2>

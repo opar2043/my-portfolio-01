@@ -1,18 +1,24 @@
-import { div } from "framer-motion/client";
-import { easeInOut } from "motion";
-import { motion } from "motion/react";
-const Title = ({ title }) => {
+const Title = ({ head, head2, para }) => {
   return (
-    <div className="md:w-full w-11/12 my-8 flex  justify-center items-center mx-auto">
-      <motion.h2
-        animate={{ color: ["#f5cb42", "#eff542", "#e6f542"] }}
-        transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
-        className="text-2xl pb-5 border-b-2 border-yellow-200 w-full md:w-[400px] mx-auto md:text-5xl text-center py-3 font-bold"
-      >
-        {title}
-      </motion.h2>
+    <div className="flex flex-col items-center my-5 mt-0 md:mt-10">
+      <div className="flex items-center mb-3 w-full justify-center gap-3">
+        {/* Left Border */}
+        <div className="hidden sm:block border-t-2 border-yellow-400 w-12 sm:w-16 mt-3"></div>
+
+        {/* Heading */}
+        <h2 className="text-2xl md:text-4xl font-bold text-yellow-400 text-center">
+          {head} <span className="text-yellow-400">{head2}</span>
+        </h2>
+
+        {/* Right Border */}
+        <div className="hidden sm:block border-t-2 border-yellow-400 w-12 sm:w-16 mt-3"></div>
+      </div>
+
+      {/* Paragraph */}
+      <p className="text-yellow-400 text-center">{para}</p>
     </div>
   );
 };
 
 export default Title;
+

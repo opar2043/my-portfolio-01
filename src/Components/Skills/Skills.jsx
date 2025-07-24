@@ -10,7 +10,7 @@ import { motion } from "motion/react";
 const Skills = () => {
   return (
     <div id="skill">
-      <Title title={"My Skils"}></Title>
+      <Title head={"My Skils"}></Title>
       <motion.div
         initial={{ y: 40, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
