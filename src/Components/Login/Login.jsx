@@ -5,7 +5,6 @@ import { useState } from "react";
 import Swal from "sweetalert2";
 
 
-
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -15,17 +14,29 @@ const mypass = "rijoan2043"
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsLoading(true);
-    // Simulate login processing
 
     const email = e.target.email.value;
     const pass = e.target.pass.value;
 
     if (email === myemail && pass === mypass) {
-        Swal.success("Login successful!");
-        navigate('/admin');
+      // Store user info in localStorage (mock login session)
+      localStorage.setItem("authUser", JSON.stringify({ email }));
+
+      Swal.fire({
+        icon: "success",
+        title: "Login successful!",
+        timer: 1500,
+        showConfirmButton: false,
+      }).then(() => {
+        navigate("/admin");
+      });
     } else {
-        Swal.error("Invalid email or password!");
+      Swal.fire({
+        icon: "error",
+        title: "Invalid email or password!",
+      });
     }
+
     setTimeout(() => setIsLoading(false), 1500);
   };
 
