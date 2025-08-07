@@ -14,7 +14,7 @@ const Footer = () => {
       <p className="text-sm text-black font-semibold"><strong>Mobile: </strong>01814482832</p>
       <p className="text-sm text-black font-semibold"><strong>Email: </strong><a href="">rezonerashidopar@gmail.com</a></p>
       <p className="text-sm text-black font-semibold">- Junior Fullstack Developer</p>
-      <p className="text-sm text-black font-semibold">- React Developer</p>
+      <p className="text-sm text-black font-semibold">- React Developer | Wordpress Developer</p>
 
     </div>
 

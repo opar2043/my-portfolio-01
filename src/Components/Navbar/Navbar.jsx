@@ -32,6 +32,9 @@ const Navbar = () => {
       <li className=" py-1 rounded-md">
         <a href="#skill">Skills</a>
       </li>
+      <li className=" py-1 rounded-md">
+        <a href="#skill">Admin</a>
+      </li>
     </>
   );
 
@@ -64,10 +67,12 @@ const Navbar = () => {
             </ul>
           </div>
           <div className="flex items-center gap-1 justify-left w-full ">
-            <img
+           <Link to={"/login"}>
+               <img
               src="https://i.ibb.co.com/k64ntGV0/porfolio-logo.png"
               className=" w-4 md:w-8 rounded-full"
             />
+           </Link>
             <p className="md:text-4xl text-sm font-bold bg-gradient-to-r from-yellow-400  to-yellow-300 bg-clip-text text-transparent">
               Rijoan Rashid Opar
             </p>

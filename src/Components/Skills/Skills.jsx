@@ -1,7 +1,7 @@
 import { FaCss3, FaHtml5, FaJs, FaNodeJs, FaReact } from "react-icons/fa";
 import Title from "../Navbar/Title";
-import { SiExpress, SiMongodb, SiFirebase } from "react-icons/si";
-import { FaC } from "react-icons/fa6";
+import { SiExpress, SiMongodb, SiFirebase, SiWoocommerce } from "react-icons/si";
+import { FaC, FaElementor, FaWordpress } from "react-icons/fa6";
 import { TbBrandCpp } from "react-icons/tb";
 import { RiTailwindCssFill } from "react-icons/ri";
 import "animate.css";
@@ -156,6 +156,36 @@ const Skills = () => {
         >
           <SiFirebase className="text-5xl text-orange-700"></SiFirebase>
           <p className="text-lg font-semibold text-yellow-300">Firebase</p>
+        </motion.div>
+
+        <motion.div
+          animate={{
+            y: [-20, -15, -23],
+          }}
+          transition={{
+            duration: 3.9,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className="border border-yellow-300 rounded-xl py-3 px-6 flex justify-center items-center gap-1 flex-col"
+        >
+          <FaWordpress className="text-5xl"></FaWordpress>
+          <p className="text-lg font-semibold text-yellow-300">Wordpress</p>
+        </motion.div>
+
+        <motion.div
+          animate={{
+            y: [-15, -10, -20],
+          }}
+          transition={{
+            duration: 3.7,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className="border border-yellow-300 rounded-xl py-3 px-6 flex justify-center items-center gap-1 flex-col"
+        >
+           <FaElementor className="text-5xl"></FaElementor>
+          <p className="text-lg font-semibold text-yellow-300">Elementor</p>
         </motion.div>
 
         <motion.div

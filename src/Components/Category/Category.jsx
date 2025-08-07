@@ -1,79 +1,94 @@
-import React from "react";
 import Title from "../Navbar/Title";
 import { motion } from "framer-motion";
+import { FaCarAlt } from "react-icons/fa";
+import { FaReact, FaWordpress } from "react-icons/fa6";
 
-const websites = [
+const technologies = [
   {
-    title: "Restaurant",
-    image: "https://i.ibb.co.com/hKqq6DS/cover-Recipi.webp",
+    title: "MERN Stack",
+    description: "Full-stack web applications with MongoDB, Express, React, and Node.js",
+    icon: <FaReact className="text-4xl text-blue-400" />,
+    features: ["Custom APIs", "User Authentication", "Real-time Data", "Admin Dashboard"],
+    color: "from-blue-500/10 to-blue-800/10"
   },
   {
-    title: "Academic",
-    image: "https://i.ibb.co.com/XrqXH3VL/harverd.jpg",
+    title: "WordPress",
+    description: "Professional websites with WordPress CMS",
+    icon: <FaWordpress className="text-4xl text-blue-700" />,
+    features: ["WooCommerce", "Custom Themes", "Responsive Design","SEO Optimization"],
+    color: "from-blue-700/10 to-blue-900/10"
   },
   {
-    title: "Hospital",
-    image: "https://i.ibb.co.com/q3bwt295/hspital.jpg",
-  },
-  {
-    title: "Matrimonial",
-    image: "https://i.ibb.co.com/rFkdKRw/coupleHd.jpg",
-  },
-  {
-    title: "Tech",
-    image: "https://i.ibb.co.com/SD55xt4z/digital.webp",
-  },
-  {
-    title: "Gadget",
-    image: "https://i.ibb.co.com/pxJJzGJ/gadjet.jpg",
-  },
-  {
-    title: "Children",
-    image: "https://i.ibb.co.com/nHHNQh3/children.jpg",
-  },
-  {
-    title: "Pet Hub",
-    image: "https://i.ibb.co.com/67yfYvkh/pethub.png",
-  },
+    title: "eCommerce ",
+    description: "WooCommerce and custom eCommerce in MERN Stack",
+    icon: <FaCarAlt className="text-4xl text-yellow-400" />,
+    features: ["Product Management", "Payment Gateways", "Order Tracking", "Responsive Design"],
+    color: "from-yellow-500/10 to-yellow-700/10"
+  }
 ];
 
 const Category = () => {
   return (
-    <div id="category">
+    <div id="category" className="py-12 px-4 md:px-8 lg:px-16">
       <Title head={"Service"}></Title>
-      <h2 className="text-center text-lg font-semibold my-6 text-yellow-300">
-        We Can Build Several Project by Your Choice
-      </h2>
-
-      <motion.div
-        initial={{ y: 80, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 1, delay: 0.2, ease: "easeInOut" }}
-        viewport={{ once: true }}
-        className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-4"
+      <motion.h2 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="text-center text-xl md:text-2xl font-semibold my-6 text-yellow-300"
       >
-        {websites.map((web, idx) => (
-          <div
-            key={idx}
-            className="card bg-transparent  shadow-xl border-2 border-yellow-400"
+        I Can Build Custom Solutions Tailored to Your Needs
+      </motion.h2>
+
+      {/* Technology Cards */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+        {technologies.map((tech, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            viewport={{ once: true }}
+            className={`bg-gradient-to-br ${tech.color} rounded-xl p-6 border border-yellow-400/30 shadow-lg hover:shadow-yellow-400/20 transition-all duration-300`}
           >
-            <figure>
-              <img
-                src={web.image}
-                className="w-full h-32 md:h-52 "
-                alt="Shoes"
-              />
-            </figure>
-            <div className="card-body ">
-              <h2 className="card-title text-md md:text-xl flex-col text-center  text-yellow-400">
-                {web.title} Website
-                <div className="badge badge-warning hover:badge-primary">
-                  Contact US!
-                </div>
-              </h2>
+            <div className="flex items-center gap-4 mb-4">
+              <div className="p-3 rounded-full bg-black/20 backdrop-blur-sm">
+                {tech.icon}
+              </div>
+              <h3 className="text-xl font-bold text-yellow-300">{tech.title}</h3>
             </div>
-          </div>
+            <p className="text-gray-300 mb-4">{tech.description}</p>
+            
+            <ul className="space-y-2 mb-6">
+              {tech.features.map((feature, i) => (
+                <li key={i} className="flex items-center">
+                  <span className="w-2 h-2 rounded-full bg-yellow-400 mr-2"></span>
+                  <span className="text-gray-300">{feature}</span>
+                </li>
+              ))}
+            </ul>
+            
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="w-full py-2 bg-yellow-400/10 hover:bg-yellow-400/20 text-yellow-300 rounded-lg border border-yellow-400/50 transition-all duration-300"
+            >
+              Get {tech.title} Service
+            </motion.button>
+          </motion.div>
         ))}
+      </div>
+
+      {/* Website Categories */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+        viewport={{ once: true }}
+        className="mt-16"
+      >
+
+
       </motion.div>
     </div>
   );
