@@ -3,7 +3,6 @@ import { SiGmail } from "react-icons/si";
 import { Link, NavLink } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import { PiReadCvLogoThin } from "react-icons/pi";
-import { useState } from "react";
 
 const Navbar = () => {
   const links = (
@@ -31,9 +30,6 @@ const Navbar = () => {
       </li>
       <li className=" py-1 rounded-md">
         <a href="#skill">Skills</a>
-      </li>
-      <li className=" py-1 rounded-md">
-        <a href="#skill">Admin</a>
       </li>
     </>
   );
@@ -80,7 +76,7 @@ const Navbar = () => {
         </div>
 
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal space-x-1 font-semibold">
+          <ul className="menu menu-horizontal  font-semibold">
             {links}
           </ul>
         </div>

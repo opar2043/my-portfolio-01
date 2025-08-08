@@ -2,12 +2,14 @@ import { FaFacebook, FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import Title from "../Navbar/Title";
 import { SiGmail } from "react-icons/si";
 import { motion } from "motion/react";
-import Form from "./Form";
 import Passion from "./Passion";
 
 const Contact = () => {
   return (
-    <div id="contact" className="my-10 border-2 border-yellow-500 p-3 shadow-2xl rounded-xl">
+    <div
+      id="contact"
+      className="my-10 border-2 border-yellow-500 p-3 shadow-2xl rounded-xl"
+    >
       <Title head={"Reach Me"}></Title>
 
       <div>
@@ -19,7 +21,7 @@ const Contact = () => {
             viewport={{ once: true }}
             className="md:w-2/3 w-full p-8  lg:col-span-3 lg:p-12 "
           >
-             <Passion></Passion>
+            <Passion></Passion>
 
             <img src="" alt="" />
 
@@ -29,10 +31,6 @@ const Contact = () => {
           </motion.div>
 
           <motion.div
-            // initial={{ x: 20, opacity: 0 }}
-            // whileInView={{ x: 0, opacity: 1 }}
-            // transition={{ duration: 0.9, delay: 0.2, ease: "easeInOut" }}
-            // viewport={{ once: true }}
             className="md:w-1/3 px-5 py-6 w-full bg-white/10 backdrop-blur-lg rounded-xl  shadow-lg border border-yellow-300"
           >
             {/* Headline */}
@@ -91,7 +89,9 @@ const Contact = () => {
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.7, ease: "easeInOut" }}
               viewport={{ once: true }}
-              href="https://mail.google.com/mail/u/0/#inbox"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=rijoanrashidopar@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center justify-between gap-4 mt-4 bg-gradient-to-r from-red-200 to-red-400 py-3 px-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
             >
               <span className="text-black font-semibold text-lg flex items-center gap-2">
@@ -100,7 +100,9 @@ const Contact = () => {
               <motion.a
                 whileHover={{ scale: 1.15 }}
                 transition={{ duration: 0.2, ease: "easeInOut" }}
-                href="https://mail.google.com/mail/u/0/#inbox"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=rijoanrashidopar@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-white p-2 rounded-full shadow-md hover:shadow-lg"
               >
                 <SiGmail className="text-red-500 text-xl" />
