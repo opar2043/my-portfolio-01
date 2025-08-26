@@ -2,19 +2,35 @@ import { useEffect, useState } from "react";
 import { FaBookOpen, FaGithub, FaHome } from "react-icons/fa";
 import { FaArrowLeft, FaCircleInfo } from "react-icons/fa6";
 import { Link, useParams } from "react-router-dom";
+import supabase from "../../Supabase/Supabase";
 
 const ProDetail = () => {
   const { id } = useParams();
-  console.log(id);
+  // console.log(id);
 
   const [projects, setProjects] = useState([]);
+  // useEffect(() => {
+  //   fetch("/project.json")
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setProjects(data);
+  //     });
+  // }, []);
+
+  async function getProducts() {
+    const { data, error } = await supabase.from("projects").select("*");
+    if (error) {
+      console.log(error);
+    } else {
+      setProjects(data);
+    }
+  }
+
   useEffect(() => {
-    fetch("/project.json")
-      .then((res) => res.json())
-      .then((data) => {
-        setProjects(data);
-      });
+    getProducts();
   }, []);
+
+  console.log(projects);
 
   const data = projects.find((pro) => pro.id == id);
   const {
@@ -54,7 +70,7 @@ const ProDetail = () => {
 
           <div className="flex flex-wrap gap-3 mt-3">
             {tech &&
-              tech.map((t, idx) => (
+              tech?.map((t, idx) => (
                 <span
                   key={idx}
                   className="px-6 py-1  rounded-full bg-violet-700 text-xs font-semibold shadow-lg hover:bg-yellow-300 hover:text-black transition duration-300 ease-in-out"
