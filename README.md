@@ -1,6 +1,6 @@
 # Portfolio - React + Vite  
 
-![Portfolio Preview](https://cosmic-bombolone-28a715.netlify.app/)  
+![Portfolio Preview](https://rijoanrashidopar.netlify.app/)  
 
 ## 🚀 Introduction  
 This is my personal portfolio website built with **React** and **Vite**. The portfolio showcases my skills as a **Frontend React Developer** with backend knowledge. It features my projects, skills, and experience in an interactive and responsive design.  
@@ -17,7 +17,7 @@ This is my personal portfolio website built with **React** and **Vite**. The por
 
 ## 🌐 Live Demo  
 Check out the live demo of my portfolio:  
-🔗 [Live Portfolio](https://cosmic-bombolone-28a715.netlify.app/)  
+🔗 [Live Portfolio](https://rijoanrashidopar.netlify.app/)  
 
 ## ✨ Features  
 - ⚡ Built with **React** and **Vite** for fast performance  
