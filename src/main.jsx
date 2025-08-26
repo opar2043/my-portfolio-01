@@ -9,6 +9,7 @@ import ProDetail from "./Components/Projects/ProDetail.jsx";
 import AllProjects from "./Components/Projects/AllProjects.jsx";
 import Login from "./Components/Login/Login.jsx";
 import Admin from "./Components/Login/Admin.jsx";
+import Register from "./Components/Login/Register.jsx";
 
 // const router = createBrowserRouter([
 //   {
@@ -55,6 +56,10 @@ const router = createBrowserRouter([
       {
         path: "/admin",
         element: <Admin></Admin>
+      },
+      {
+        path: "/register",
+        element: <Register></Register>
       },
     ],
   },

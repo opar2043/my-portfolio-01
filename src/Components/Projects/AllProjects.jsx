@@ -1,18 +1,36 @@
 import React, { useEffect, useState } from "react";
 import Title from "../Navbar/Title";
 import Card from "./Card";
-import Navbar from "../Navbar/Navbar";
+import supabase from "../../Supabase/Supabase";
 
 const AllProjects = () => {
   const [projects, setProjects] = useState([]);
-  useEffect(() => {
-    fetch("/project.json")
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        setProjects(data);
-      });
-  }, []);
+  // useEffect(() => {
+  //   fetch("/project.json")
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       console.log(data);
+  //       setProjects(data);
+  //     });
+  // }, []);
+
+   async function getProducts()
+  {
+    const {data , error } = await supabase.from('projects').select("*");
+    if(error)
+    {
+      console.log(error);
+    }else{
+      setProjects(data);
+      console.log(data);
+    }
+  }
+
+  useEffect(()=>{
+    getProducts();
+  },[])
+
+  
 
   return (
     <div>

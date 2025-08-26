@@ -1,4 +1,4 @@
-import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaFacebook, FaGithub, FaLinkedin, FaUser } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 import { Link, NavLink } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
@@ -59,17 +59,18 @@ const Navbar = () => {
               tabIndex={0}
               className="menu menu-sm  dropdown-content font-semibold text-black bg-yellow-300 rounded-box z-[1] mt-3 w-52 p-2 shadow"
             >
-              {links}
+              {links} 
             </ul>
+
           </div>
           <div className="flex items-center gap-1 justify-left w-full ">
-           <Link to={"/login"}>
+          
                <img
               src="https://i.ibb.co.com/k64ntGV0/porfolio-logo.png"
               className=" w-4 md:w-8 rounded-full"
             />
-           </Link>
-            <p className="md:text-4xl text-sm font-bold bg-gradient-to-r from-yellow-400  to-yellow-300 bg-clip-text text-transparent">
+          
+            <p className="md:text-3xl text-sm font-bold bg-gradient-to-r from-yellow-400  to-yellow-300 bg-clip-text text-transparent">
               Rijoan Rashid Opar
             </p>
           </div>
@@ -79,6 +80,7 @@ const Navbar = () => {
           <ul className="menu menu-horizontal  font-semibold">
             {links}
           </ul>
+
         </div>
 
         <div className="navbar-end flex items-center space-x-4">
@@ -87,6 +89,11 @@ const Navbar = () => {
               <PiReadCvLogoThin className="text-lg" /> Resume
             </button>
           </a>
+          <span className="flex items-center justify-center rounded-full bg-yellow-400 p-2 shadow hover:bg-yellow-300 transition">
+            <Link to={'/login'}>
+              <FaUser size={22} className="text-yellow-900" />
+            </Link>
+          </span>
         </div>
       </div>
       <ToastContainer />
@@ -95,3 +102,5 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+// rezoan2832

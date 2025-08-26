@@ -16,7 +16,7 @@ const Card = ({ item }) => {
             />
           </figure>
           <div className="w-full p-4 flex flex-col gap-2 justify-center items-center">
-            <h2 className="text-yellow-400 font-extrabold md:text-2xl text-xl text-center">
+            <h2 className="text-yellow-400 font-extrabold md:text-xl text-lg text-center">
               {item?.project}
             </h2>
 
