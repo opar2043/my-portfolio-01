@@ -1,149 +1,6 @@
-// import { useEffect, useState } from "react";
-// import { FaBookOpen, FaGithub, FaHome } from "react-icons/fa";
-// import { FaArrowLeft, FaCircleInfo } from "react-icons/fa6";
-// import { Link, useParams } from "react-router-dom";
-// import supabase from "../../Supabase/Supabase";
-
-// const ProDetail = () => {
-//   const { id } = useParams();
-//   console.log(id);
-
-//   const [projects, setProjects] = useState([]);
-//   // useEffect(() => {
-//   //   fetch("/project.json")
-//   //     .then((res) => res.json())
-//   //     .then((data) => {
-//   //       setProjects(data);
-//   //     });
-//   // }, []);
-
-//   async function getProducts() {
-//     const { data, error } = await supabase.from("projects").select("*");
-//     if (error) {
-//       console.log(error);
-//     } else {
-//       setProjects(data);
-//     }
-//   }
-
-//   useEffect(() => {
-//     getProducts();
-//   }, []);
-
-//   console.log(projects);
-
-//   const data = projects.find((pro) => pro.id == id);
-//   const {
-//     description,
-//     github,
-//     name,
-//     photo,
-//     project,
-//     project_link,
-//     tech,
-//     plan,
-//   } = data || {};
-
-//   console.log(data , 'obj');
-
-//   return (
-//     <div className="absolute inset-0 z-10 h-fit  text-white w-full items-center [background:radial-gradient(135%_135%_at_55%_15%,#000_43%,#63e_105%)] pt-12 mx-auto ">
-//           <div className="card lg:card-side my-16 w-11/12 mx-auto rounded-xl  shadow-xl ">
-//         <figure>
-//           <img src={data && photo} alt="Album" className="h-full" />
-//         </figure>
-//         <div className="card-body flex flex-col gap-2 rounded-r-3xl  border-2 border-yellow-300">
-//           <h2 className="card-title text-4xl font-extrabold text-yellow-300 tracking-wide">
-//             {data && project}
-//           </h2>
-//           <p className="text-lg font-semibold text-violet-200">
-//             {data && name} (Owner){" "}
-//           </p>
-//           <p className="text-sm leading-relaxed opacity-90">
-//             <span className="font-semibold text-yellow-400">Description: </span>
-//             {data && description}
-//           </p>
-//           <p className="text-sm">
-//             <span className="font-semibold text-yellow-400">Future Plan: </span>
-//             {data && plan}
-//           </p>
-
-//           {/* Technologies Used */}
-
-//           <div className="flex flex-wrap gap-3 mt-3">
-//             {/* {tech &&
-//               tech?.map((t, idx) => (
-//                 <span
-//                   key={idx}
-//                   className="px-6 py-1  rounded-full bg-violet-700 text-xs font-semibold shadow-lg hover:bg-yellow-300 hover:text-black transition duration-300 ease-in-out"
-//                 >
-//                   {t}
-//                 </span>
-//               ))} */}
-//           </div>
-//           <div className="card-actions justify-start my-2">
-//             <div className="my-4 flex gap-6">
-//               {/* Details Button Section */}
-//               <div className="flex flex-col items-center justify-center gap-1">
-//                 <Link to={"/"}>
-//                   <button className="p-3 rounded-full bg-gradient-to-r from-red-500 to-red-600 hover:bg-violet-500 hover:text-white shadow-md transition-colors duration-300">
-//                     <FaHome className="text-xl text-white" />
-//                   </button>
-//                 </Link>
-
-//                 <p className="font-semibold flex items-center justify-center gap-1 text-red-400 text-sm mt-1">
-//                   <FaArrowLeft></FaArrowLeft> Back to Home
-//                 </p>
-//               </div>
-
-//               {/* Live Button Section */}
-//               <div className="flex flex-col items-center justify-center gap-1">
-//                 <a
-//                   href={data && project_link}
-//                   target="_blank"
-//                   rel="noopener noreferrer"
-//                 >
-//                   <button className="p-3 rounded-full bg-gradient-to-r from-yellow-300 to-yellow-600 text-white shadow-md hover:scale-110 transition-transform duration-300">
-//                     <FaBookOpen className="text-xl text-yellow-900" />
-//                   </button>
-//                 </a>
-//                 <p className="font-semibold text-yellow-400 text-sm mt-1">
-//                   Live Demo
-//                 </p>
-//               </div>
-
-//               {/* Client site Button Section */}
-//               <div className="flex flex-col items-center justify-center gap-1">
-//                 <a href={data && github} target="_blank" rel="noopener noreferrer">
-//                   <button className="p-3 rounded-full bg-gradient-to-r from-yellow-300 to-yellow-600 text-white shadow-md hover:scale-110 transition-transform duration-300">
-//                     <FaGithub className="text-xl text-yellow-900"></FaGithub>
-//                   </button>
-//                 </a>
-//                 <p className="font-semibold text-yellow-400  text-sm mt-1">
-//                   GitHub Repo
-//                 </p>
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-
-
-
-//   );
-// };
-
-// export default ProDetail;
-
-
-
-
-
-
 import { useEffect, useState } from "react";
 import { FaBookOpen, FaGithub, FaHome, FaExternalLinkAlt, FaChalkboardTeacher, FaUserGraduate } from "react-icons/fa";
-import { FaArrowLeft, FaCircleInfo,  FaDatabase } from "react-icons/fa6";
+import { FaArrowLeft, FaCircleInfo, FaDatabase } from "react-icons/fa6";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import supabase from "../../Supabase/Supabase";
 import { motion } from "framer-motion";
@@ -178,6 +35,7 @@ const ProDetail = () => {
   }, []);
 
   const data = projects.find((pro) => pro.id == id);
+  console.log(data);
 
   if (loading) {
     return (
@@ -207,26 +65,30 @@ const ProDetail = () => {
     );
   }
 
+
+  const techIcons = {
+  html: { emoji: "🌐", color: "text-orange-500" },
+  css: { emoji: "🎨", color: "text-blue-500" },
+  react: { emoji: "⚛️", color: "text-blue-400" },
+  js: { emoji: "🟨", color: "text-yellow-400" },
+  mongodb: { emoji: "🍃", color: "text-green-400" },
+  "express js": { emoji: "🚀", color: "text-gray-200" },
+  firebase: { emoji: "🔥", color: "text-yellow-400" },
+  "node js": { emoji: "🟩", color: "text-green-600" },
+  "zenu ui": { emoji: "💠", color: "text-purple-400" },
+  tailwind: { emoji: "🎨", color: "text-cyan-400" },
+};
+
   const { description, github, name, photo, project, project_link, tech, plan } = data;
-  const techList = tech ? tech.split('; ') : [];
+  console.log(tech);
+  const techList = tech && tech.split(',') ;
+  
+
 
   return (
-    <div className="h-fit pt-20 pb-10 bg-gradient-to-br from-black via-slate-950 to-violet-950 text-white">
+    <div className="min-h-screen pt-20 pb-10 bg-gradient-to-br from-black via-slate-950 to-violet-950 text-white">
       <div className="container mx-auto px-4">
-        {/* Back Button */} hhhhh
-        <motion.div
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="mb-6"
-        >
-          <button
-            onClick={() => navigate(-1)}
-            className="flex items-center gap-2 text-violet-300 hover:text-yellow-400 transition-colors font-medium"
-          >
-            <FaArrowLeft /> Back
-          </button>
-        </motion.div>
+
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -235,26 +97,28 @@ const ProDetail = () => {
           className="bg-slate-900/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-violet-700/30 shadow-2xl"
         >
           <div className="flex flex-col lg:flex-row">
-            {/* Project Image */}
-            <div className="lg:w-1/2 relative">
-              <div className="h-full overflow-hidden">
-                <motion.img
-                  initial={{ scale: 1.1 }}
-                  animate={{ scale: 1 }}
-                  transition={{ duration: 0.7 }}
+            {/* Project Image - Fixed size */}
+            <div className="lg:w-1/2 p-6 flex items-center justify-center">
+              <motion.div
+                initial={{ scale: 1.1 }}
+                animate={{ scale: 1 }}
+                transition={{ duration: 0.7 }}
+                className="relative w-full h-80 overflow-hidden rounded-xl border-2 border-violet-500/30 shadow-lg"
+              >
+                <img
                   src={photo}
                   alt={project}
-                  className="w-full h-full object-cover min-h-[250px]"
+                  className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                 
                 {/* Project title overlay */}
-                <div className="absolute bottom-0 left-0 right-0 p-6">
+                <div className="absolute bottom-0 left-0 right-0 p-4">
                   <motion.h2 
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.3, duration: 0.5 }}
-                    className="text-3xl lg:text-4xl font-bold text-yellow-400 mb-2"
+                    className="text-2xl font-bold text-yellow-400 mb-1"
                   >
                     {project}
                   </motion.h2>
@@ -262,12 +126,12 @@ const ProDetail = () => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.4, duration: 0.5 }}
-                    className="text-lg text-violet-200"
+                    className="text-violet-200 text-sm"
                   >
                     By {name}
                   </motion.p>
                 </div>
-              </div>
+              </motion.div>
             </div>
 
             {/* Project Details */}
@@ -277,12 +141,12 @@ const ProDetail = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5, duration: 0.5 }}
-                className="mb-8"
+                className="mb-6"
               >
-                <h3 className="flex items-center gap-2 text-yellow-400 font-semibold text-lg mb-4">
+                <h3 className="flex items-center gap-2 text-yellow-400 font-semibold text-lg mb-3">
                   <FaCircleInfo /> Project Overview
                 </h3>
-                <p className="text-violet-100 leading-relaxed bg-slate-800/30 p-4 rounded-lg border border-slate-700/20">
+                <p className="text-violet-100 leading-relaxed bg-slate-800/30 p-4 rounded-lg border border-slate-700/20 text-sm">
                   {description}
                 </p>
               </motion.div>
@@ -292,27 +156,27 @@ const ProDetail = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.6, duration: 0.5 }}
-                className="mb-8"
+                className="mb-6"
               >
-                <h3 className="flex items-center gap-2 text-yellow-400 font-semibold text-lg mb-4">
+                <h3 className="flex items-center gap-2 text-yellow-400 font-semibold text-lg mb-3">
                   <FaChalkboardTeacher /> Key Features
                 </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <div className="grid grid-cols-1 gap-2">
                   <div className="flex items-start gap-2 bg-slate-800/30 p-3 rounded-lg border border-slate-700/20">
-                    <FaChalkboardTeacher className="text-yellow-400 mt-1 flex-shrink-0" />
-                    <p className="text-violet-100">Teachers can create and manage assignments</p>
+                    <FaChalkboardTeacher className="text-yellow-400 mt-0.5 flex-shrink-0" />
+                    <p className="text-violet-100 text-sm">Teachers can create and manage assignments</p>
                   </div>
                   <div className="flex items-start gap-2 bg-slate-800/30 p-3 rounded-lg border border-slate-700/20">
-                    <FaUserGraduate className="text-yellow-400 mt-1 flex-shrink-0" />
-                    <p className="text-violet-100">Students can submit their work easily</p>
+                    <FaUserGraduate className="text-yellow-400 mt-0.5 flex-shrink-0" />
+                    <p className="text-violet-100 text-sm">Students can submit their work easily</p>
                   </div>
                   <div className="flex items-start gap-2 bg-slate-800/30 p-3 rounded-lg border border-slate-700/20">
-                    <FaDatabase className="text-yellow-400 mt-1 flex-shrink-0" />
-                    <p className="text-violet-100">Efficient grading system for teachers</p>
+                    <FaDatabase className="text-yellow-400 mt-0.5 flex-shrink-0" />
+                    <p className="text-violet-100 text-sm">Efficient grading system for teachers</p>
                   </div>
                   <div className="flex items-start gap-2 bg-slate-800/30 p-3 rounded-lg border border-slate-700/20">
-                    <FaBookOpen className="text-yellow-400 mt-1 flex-shrink-0" />
-                    <p className="text-violet-100">Structured and intuitive user interface</p>
+                    <FaBookOpen className="text-yellow-400 mt-0.5 flex-shrink-0" />
+                    <p className="text-violet-100 text-sm">Structured and intuitive user interface</p>
                   </div>
                 </div>
               </motion.div>
@@ -322,19 +186,19 @@ const ProDetail = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.7, duration: 0.5 }}
-                className="mb-8"
+                className="mb-6"
               >
-                <h3 className="flex items-center gap-2 text-yellow-400 font-semibold text-lg mb-4">
-                   Technologies Used
+                <h3 className="flex items-center gap-2 text-yellow-400 font-semibold text-lg mb-3">
+                  Technologies Used
                 </h3>
-                <div className="flex flex-wrap gap-3">
-                  {techList.map((t, idx) => (
+                <div className="flex flex-wrap gap-2">
+                  {/* {techList.map((t, idx) => (
                     <motion.span
                       key={idx}
                       initial={{ opacity: 0, scale: 0.8 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ delay: 0.8 + idx * 0.1, duration: 0.3 }}
-                      className="px-4 py-2 rounded-full bg-gradient-to-r from-violet-700/50 to-violet-800/50 text-violet-200 text-sm font-medium border border-violet-600/30 hover:bg-yellow-400 hover:text-violet-900 transition-colors cursor-default flex items-center gap-2"
+                      className="px-3 py-1 rounded-full bg-gradient-to-r from-violet-700/50 to-violet-800/50 text-violet-200 text-xs font-medium border border-violet-600/30 hover:bg-yellow-400 hover:text-violet-900 transition-colors cursor-default flex items-center gap-1"
                     >
                       {t.includes('React') && <span className="text-blue-400">⚛️</span>}
                       {t.includes('Tailwind') && <span className="text-cyan-400">🎨</span>}
@@ -343,7 +207,14 @@ const ProDetail = () => {
                       {t.includes('Firebase') && <span className="text-yellow-400">🔥</span>}
                       {t}
                     </motion.span>
-                  ))}
+                  )) 
+                  }   */}
+
+{tech && (typeof tech === "string" ? tech.split(";") : tech).map((t, idx) => (
+  <p key={idx}>{t.trim()}</p>
+))}
+
+
                 </div>
               </motion.div>
 
@@ -352,12 +223,12 @@ const ProDetail = () => {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.9, duration: 0.5 }}
-                  className="mb-8"
+                  className="mb-6"
                 >
-                  <h3 className="flex items-center gap-2 text-yellow-400 font-semibold text-lg mb-4">
-                   Future Plans
+                  <h3 className="flex items-center gap-2 text-yellow-400 font-semibold text-lg mb-3">
+                    Future Plans
                   </h3>
-                  <p className="text-violet-100 leading-relaxed bg-slate-800/30 p-4 rounded-lg border border-slate-700/20">
+                  <p className="text-violet-100 leading-relaxed bg-slate-800/30 p-3 rounded-lg border border-slate-700/20 text-sm">
                     {plan}
                   </p>
                 </motion.div>
@@ -368,16 +239,16 @@ const ProDetail = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1.0, duration: 0.5 }}
-                className="flex flex-wrap gap-4 mt-auto pt-4"
+                className="flex flex-wrap gap-3 mt-auto pt-4"
               >
                 <a
                   href={project_link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1"
+                  className="flex-1 min-w-[120px]"
                 >
-                  <button className="w-full flex items-center justify-center gap-1 py-2 px-4 bg-gradient-to-r from-yellow-500 to-yellow-600 text-violet-900 font-semibold rounded-lg hover:from-yellow-400 hover:to-yellow-500 transition-all shadow-lg hover:shadow-yellow-500/20">
-                    <FaExternalLinkAlt className="text-sm" /> Live Demo
+                  <button className="w-full flex items-center justify-center gap-1 py-2 px-3 bg-gradient-to-r from-yellow-500 to-yellow-600 text-violet-900 font-semibold rounded-lg hover:from-yellow-400 hover:to-yellow-500 transition-all shadow-lg hover:shadow-yellow-500/20 text-sm">
+                    <FaExternalLinkAlt className="text-xs" /> Live Demo
                   </button>
                 </a>
 
@@ -385,23 +256,39 @@ const ProDetail = () => {
                   href={github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1"
+                  className="flex-1 min-w-[120px]"
                 >
-                  <button className="w-full flex items-center justify-center gap-1 py-2 px-4 bg-slate-800 border border-slate-700 text-violet-100 font-semibold rounded-lg hover:bg-slate-700 transition-all">
-                    <FaGithub /> GitHub Repo
+                  <button className="w-full flex items-center justify-center gap-1 py-2 px-3 bg-slate-800 border border-slate-700 text-violet-100 font-semibold rounded-lg hover:bg-slate-700 transition-all text-sm">
+                    <FaGithub className="text-xs" /> GitHub
                   </button>
                 </a>
 
-                <Link to="/" className="flex-1">
-                  <button className="w-full flex items-center justify-center gap-1 py-2 px-4 bg-violet-800 border border-violet-700 text-violet-100 font-semibold rounded-lg hover:bg-violet-700 transition-all">
-                    <FaHome /> Back Home
+                <Link to="/" className="flex-1 min-w-[120px]">
+                  <button className="w-full flex items-center justify-center gap-1 py-2 px-3 bg-violet-800 border border-violet-700 text-violet-100 font-semibold rounded-lg hover:bg-violet-700 transition-all text-sm">
+                    <FaHome className="text-xs" /> Home
                   </button>
                 </Link>
               </motion.div>
             </div>
           </div>
         </motion.div>
+
+         {/* Back Button */}
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="mt-6"
+        >
+          <button
+            onClick={() => navigate(-1)}
+            className="flex items-center gap-2  hover:text-yellow-400 transition-colors font-medium text-red-600"
+          >
+            <FaArrowLeft /> Back
+          </button>
+        </motion.div>
       </div>
+
     </div>
   );
 };
