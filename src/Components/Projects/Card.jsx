@@ -4,6 +4,7 @@ import { FaCircleInfo } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
 const Card = ({ item }) => {
+  // console.log(item , 'ghhg');
   return (
     <div>
       <div className="rounded-md">

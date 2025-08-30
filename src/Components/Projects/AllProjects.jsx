@@ -22,7 +22,7 @@ const AllProjects = () => {
       console.log(error);
     }else{
       setProjects(data);
-      console.log(data);
+      // console.log(data);
     }
   }
 

@@ -23,9 +23,7 @@ const Projects = () => {
       console.log(error);
     } else {
       setProjects(data);
-        console.log("Status:", status);
-  console.log("Error:", error);
-  console.log("Data:", data);
+      // console.log(data);
     }
   }
 
