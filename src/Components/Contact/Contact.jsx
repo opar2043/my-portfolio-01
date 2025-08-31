@@ -2,7 +2,7 @@ import { FaFacebook, FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import Title from "../Navbar/Title";
 import { SiGmail } from "react-icons/si";
 import { motion } from "motion/react";
-import Passion from "./Passion";
+import Form from "./Form";
 
 const Contact = () => {
   return (
@@ -21,7 +21,7 @@ const Contact = () => {
             viewport={{ once: true }}
             className="md:w-2/3 w-full p-8  lg:col-span-3 lg:p-12 "
           >
-            <Passion></Passion>
+            <Form></Form>
 
             <img src="" alt="" />
 

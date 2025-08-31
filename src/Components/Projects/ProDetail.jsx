@@ -103,14 +103,14 @@ const ProDetail = () => {
                 initial={{ scale: 1.1 }}
                 animate={{ scale: 1 }}
                 transition={{ duration: 0.7 }}
-                className="relative w-full h-80 overflow-hidden rounded-xl border-2 border-violet-500/30 shadow-lg"
+                className="relative w-full h-96 overflow-hidden rounded-xl border-2 border-violet-500/30 shadow-lg"
               >
                 <img
                   src={photo}
                   alt={project}
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
                 
                 {/* Project title overlay */}
                 <div className="absolute bottom-0 left-0 right-0 p-4">
@@ -181,42 +181,49 @@ const ProDetail = () => {
                 </div>
               </motion.div>
 
+
               {/* Technologies Used */}
-              <motion.div 
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.7, duration: 0.5 }}
-                className="mb-6"
-              >
-                <h3 className="flex items-center gap-2 text-yellow-400 font-semibold text-lg mb-3">
-                  Technologies Used
-                </h3>
-                <div className="flex flex-wrap gap-2">
-                  {/* {techList.map((t, idx) => (
-                    <motion.span
-                      key={idx}
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ delay: 0.8 + idx * 0.1, duration: 0.3 }}
-                      className="px-3 py-1 rounded-full bg-gradient-to-r from-violet-700/50 to-violet-800/50 text-violet-200 text-xs font-medium border border-violet-600/30 hover:bg-yellow-400 hover:text-violet-900 transition-colors cursor-default flex items-center gap-1"
-                    >
-                      {t.includes('React') && <span className="text-blue-400">⚛️</span>}
-                      {t.includes('Tailwind') && <span className="text-cyan-400">🎨</span>}
-                      {t.includes('MongoDB') && <span className="text-green-400">🍃</span>}
-                      {t.includes('Express') && <span className="text-gray-200">🚀</span>}
-                      {t.includes('Firebase') && <span className="text-yellow-400">🔥</span>}
-                      {t}
-                    </motion.span>
-                  )) 
-                  }   */}
+         <motion.div 
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ delay: 0.7, duration: 0.5 }}
+  className="mb-6"
+>
+  <h3 className="flex items-center gap-2 text-yellow-400 font-semibold text-lg mb-3">
+    Technologies Used
+  </h3>
+  <div className="flex flex-wrap gap-2">
 
-{tech && (typeof tech === "string" ? tech.split(";") : tech).map((t, idx) => (
-  <p key={idx}>{t.trim()}</p>
-))}
+    {(() => {
+      let techList = [];
+      try {
+        techList = typeof tech === "string" ? JSON.parse(tech) : tech;
+      } catch (e) {
+        console.error("Failed to parse tech field:", e);
+        techList = [];
+      }
 
+      return Array.isArray(techList) && techList.map((t, idx) => (
+        <motion.span
+          key={idx}
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.8 + idx * 0.1, duration: 0.3 }}
+          className="px-3 py-1 rounded-full bg-gradient-to-r from-violet-700/50 to-violet-800/50 text-violet-200 text-xs font-medium border border-violet-600/30 hover:bg-yellow-600 hover:text-violet-900 transition-colors cursor-default flex items-center gap-1"
+        >
+          {t.toLowerCase().includes("react") && <span className="text-blue-400">⚛️</span>}
+          {t.toLowerCase().includes("tailwind") && <span className="text-cyan-400">🎨</span>}
+          {t.toLowerCase().includes("mongodb") && <span className="text-green-400">🍃</span>}
+          {t.toLowerCase().includes("express") && <span className="text-gray-200">🚀</span>}
+          {t.toLowerCase().includes("firebase") && <span className="text-yellow-400">🔥</span>}
+          {t}
+        </motion.span>
+      ));
+    })()}
 
-                </div>
-              </motion.div>
+  </div>
+        </motion.div>
+
 
               {plan && (
                 <motion.div 

@@ -58,7 +58,7 @@ const Hero = () => {
                   duration: 0.2,
                   ease: "easeInOut",
                 }}
-                className="btn btn-primary"
+                className="px-6 py-3 bg-gradient-to-r from-violet-600 to-purple-600 text-white rounded-lg font-medium hover:from-violet-700 hover:to-purple-700 transition-all shadow-lg flex justify-center items-center gap-1"
               >
                 {" "}
                 <FaBookOpenReader></FaBookOpenReader> Certificate

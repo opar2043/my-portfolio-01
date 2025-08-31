@@ -1,29 +1,36 @@
 import { useEffect, useState } from "react";
 import Title from "../Navbar/Title";
 import { Link } from "react-router-dom";
-
 import { motion } from "framer-motion";
 import Card from "./Card";
 import supabase from "../../Supabase/Supabase";
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
-  // useEffect(() => {
-  //   fetch("/project.json")
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       console.log(data);
-  //       setProjects(data);
-  //     });
-  // }, []);
 
   async function getProducts() {
     const { data, error } = await supabase.from("projects").select("*");
     if (error) {
       console.log(error);
     } else {
-      setProjects(data);
-      // console.log(data);
+      // Sort projects by tech list length (descending)
+      const sorted = data.sort((a, b) => {
+        let techA = [];
+        let techB = [];
+
+        try {
+          techA =
+            typeof a.tech === "string" ? JSON.parse(a.tech) : a.tech || [];
+          techB =
+            typeof b.tech === "string" ? JSON.parse(b.tech) : b.tech || [];
+        } catch (e) {
+          console.error("Tech parsing error:", e);
+        }
+
+        return (techB?.length || 0) - (techA?.length || 0);
+      });
+
+      setProjects(sorted);
     }
   }
 

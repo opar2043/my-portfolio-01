@@ -1,106 +1,105 @@
-import { FaFacebook, FaGithub, FaLinkedin, FaUser } from "react-icons/fa";
-import { SiGmail } from "react-icons/si";
-import { Link, NavLink } from "react-router-dom";
-import { ToastContainer, toast } from "react-toastify";
+import { FaUser } from "react-icons/fa";
 import { PiReadCvLogoThin } from "react-icons/pi";
+import { Link } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import { IoIosMenu } from "react-icons/io"; // <-- added
+import { useState } from "react";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   const links = (
     <>
-      <Link to={"/"}>
-        <li className=" py-1 rounded-md">
-          <a href="#home">Home</a>
-        </li>
-      </Link>
-
-      <li className="py-1 rounded-md">
+      <li className="py-1 rounded-md hover:text-yellow-500 transition">
+        <Link to="\">
+          <li>Home</li>
+        </Link>
+      </li>
+      <li className="py-1 rounded-md hover:text-yellow-500 transition">
         <a href="#about">About</a>
       </li>
-
-      <li className=" py-1 rounded-md">
+      <li className="py-1 rounded-md hover:text-yellow-500 transition">
         <a href="#contact">Contact</a>
       </li>
-
-      <li className=" py-1 rounded-md">
+      <li className="py-1 rounded-md hover:text-yellow-500 transition">
         <a href="#project">Projects</a>
       </li>
-
-      <li className=" py-1 rounded-md">
+      <li className="py-1 rounded-md hover:text-yellow-500 transition">
         <a href="#edu">Education</a>
       </li>
-      <li className=" py-1 rounded-md">
+      <li className="py-1 rounded-md hover:text-yellow-500 transition">
         <a href="#skill">Skills</a>
       </li>
     </>
   );
 
   return (
-    <div className="fixed top-0 left-0 w-full  shadow-md z-50 border-b-2 bg-violet-500/25 border-violet-900">
+    <div className="fixed top-0 left-0 w-full shadow-md z-50 border-b-2 bg-violet-500/25 border-violet-900">
       <div className="navbar bg-transparent justify-between px-4 md:px-8">
-        <div className="navbar-start flex items-center">
-          <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h8m-8 6h16"
-                />
-              </svg>
-            </div>
-            <ul
-              tabIndex={0}
-              className="menu menu-sm  dropdown-content font-semibold text-black bg-yellow-300 rounded-box z-[1] mt-3 w-52 p-2 shadow"
-            >
-              {links} 
-            </ul>
-
-          </div>
-          <div className="flex items-center gap-1 justify-left w-full ">
-          
-               <img
-              src="https://i.ibb.co.com/k64ntGV0/porfolio-logo.png"
-              className=" w-4 md:w-8 rounded-full"
-            />
-          
-            <p className="md:text-3xl text-sm font-bold bg-gradient-to-r from-yellow-400  to-yellow-300 bg-clip-text text-transparent">
-              Rijoan Rashid Opar
-            </p>
-          </div>
+        {/* Navbar Start: Logo + Mobile Menu */}
+        <div className="flex items-center gap-2">
+          <img
+            src="https://i.ibb.co.com/k64ntGV0/porfolio-logo.png"
+            alt="Logo"
+            className="w-6 md:w-8 rounded-full"
+          />
+          <p className="md:text-3xl text-sm font-bold bg-gradient-to-r from-yellow-400 to-yellow-300 bg-clip-text text-transparent">
+            Rijoan Rashid Opar
+          </p>
         </div>
 
+        {/* Desktop Links */}
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal  font-semibold">
-            {links}
-          </ul>
-
+          <ul className="menu menu-horizontal font-semibold">{links}</ul>
         </div>
 
-        <div className="navbar-end flex items-center space-x-4">
-          <a href="https://drive.google.com/file/d/10K7XjFkJX8mAYD6GXzCYU6kefoTH3FOG/view?usp=drive_link">
+        {/* Navbar End: Resume + Login */}
+        <div className="flex items-center space-x-4">
+          <a
+            href="https://drive.google.com/file/d/10K7XjFkJX8mAYD6GXzCYU6kefoTH3FOG/view?usp=drive_link"
+            target="_blank"
+            rel="noreferrer"
+          >
             <button className="py-2 px-4 md:px-6 flex items-center gap-2 rounded-md text-sm font-semibold bg-gradient-to-r from-violet-600 to-violet-900 hover:from-yellow-300 hover:to-yellow-600 hover:text-black">
               <PiReadCvLogoThin className="text-lg" /> Resume
             </button>
           </a>
           <span className="flex items-center justify-center rounded-full bg-yellow-400 p-2 shadow hover:bg-yellow-300 transition">
-            <Link to={'/login'}>
+            <Link to={"/login"}>
               <FaUser size={22} className="text-yellow-900" />
             </Link>
           </span>
+
+          {/* Mobile Menu Button */}
+          <div className="lg:hidden">
+            <label
+              htmlFor="my-drawer"
+              className="btn btn-ghost p-2"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              <IoIosMenu size={28} />
+            </label>
+          </div>
         </div>
       </div>
+
+      {/* Mobile Drawer */}
+      <div
+        className={`drawer fixed top-0 left-0 w-64 h-full bg-gradient-to-r from-violet-600 to-violet-900 shadow-md z-50 transform transition-transform duration-300 ${
+          isOpen ? "translate-x-0" : "-translate-x-full"
+        }`}
+      >
+        <div className=" p-4">
+          <button className="btn btn-ghost" onClick={() => setIsOpen(false)}>
+            ✕
+          </button>
+        </div>
+        <ul className="menu  gap-1">{links}</ul>
+      </div>
+
       <ToastContainer />
     </div>
   );
 };
 
 export default Navbar;
-
-// rezoan2832
