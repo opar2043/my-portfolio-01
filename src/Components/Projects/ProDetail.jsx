@@ -1,5 +1,12 @@
 import { useEffect, useState } from "react";
-import { FaBookOpen, FaGithub, FaHome, FaExternalLinkAlt, FaChalkboardTeacher, FaUserGraduate } from "react-icons/fa";
+import {
+  FaBookOpen,
+  FaGithub,
+  FaHome,
+  FaExternalLinkAlt,
+  FaChalkboardTeacher,
+  FaUserGraduate,
+} from "react-icons/fa";
 import { FaArrowLeft, FaCircleInfo, FaDatabase } from "react-icons/fa6";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import supabase from "../../Supabase/Supabase";
@@ -42,7 +49,9 @@ const ProDetail = () => {
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-black via-slate-950 to-violet-950">
         <div className="flex flex-col items-center">
           <div className="w-16 h-16 border-4 border-violet-500 border-t-yellow-400 rounded-full animate-spin"></div>
-          <p className="mt-4 text-violet-200 font-semibold">Loading project details...</p>
+          <p className="mt-4 text-violet-200 font-semibold">
+            Loading project details...
+          </p>
         </div>
       </div>
     );
@@ -52,10 +61,14 @@ const ProDetail = () => {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-black via-slate-950 to-violet-950">
         <div className="text-center p-8 bg-slate-900/70 rounded-xl border border-violet-700/30 max-w-md">
-          <h2 className="text-2xl font-bold text-yellow-400 mb-4">Project Not Found</h2>
-          <p className="text-violet-200 mb-6">{error || "The project you're looking for doesn't exist."}</p>
-          <button 
-            onClick={() => navigate('/')}
+          <h2 className="text-2xl font-bold text-yellow-400 mb-4">
+            Project Not Found
+          </h2>
+          <p className="text-violet-200 mb-6">
+            {error || "The project you're looking for doesn't exist."}
+          </p>
+          <button
+            onClick={() => navigate("/")}
             className="px-6 py-2 bg-violet-600 hover:bg-violet-700 text-white rounded-lg font-medium transition-colors flex items-center justify-center gap-2 mx-auto"
           >
             <FaHome className="text-sm" /> Back to Home
@@ -65,31 +78,35 @@ const ProDetail = () => {
     );
   }
 
-
   const techIcons = {
-  html: { emoji: "🌐", color: "text-orange-500" },
-  css: { emoji: "🎨", color: "text-blue-500" },
-  react: { emoji: "⚛️", color: "text-blue-400" },
-  js: { emoji: "🟨", color: "text-yellow-400" },
-  mongodb: { emoji: "🍃", color: "text-green-400" },
-  "express js": { emoji: "🚀", color: "text-gray-200" },
-  firebase: { emoji: "🔥", color: "text-yellow-400" },
-  "node js": { emoji: "🟩", color: "text-green-600" },
-  "zenu ui": { emoji: "💠", color: "text-purple-400" },
-  tailwind: { emoji: "🎨", color: "text-cyan-400" },
-};
+    html: { emoji: "🌐", color: "text-orange-500" },
+    css: { emoji: "🎨", color: "text-blue-500" },
+    react: { emoji: "⚛️", color: "text-blue-400" },
+    js: { emoji: "🟨", color: "text-yellow-400" },
+    mongodb: { emoji: "🍃", color: "text-green-400" },
+    "express js": { emoji: "🚀", color: "text-gray-200" },
+    firebase: { emoji: "🔥", color: "text-yellow-400" },
+    "node js": { emoji: "🟩", color: "text-green-600" },
+    "zenu ui": { emoji: "💠", color: "text-purple-400" },
+    tailwind: { emoji: "🎨", color: "text-cyan-400" },
+  };
 
-  const { description, github, name, photo, project, project_link, tech, plan } = data;
+  const {
+    description,
+    github,
+    name,
+    photo,
+    project,
+    project_link,
+    tech,
+    plan,
+  } = data;
   console.log(tech);
-  const techList = tech && tech.split(',') ;
-  
-
+  const techList = tech && tech.split(",");
 
   return (
     <div className="min-h-screen pt-20 pb-10 bg-gradient-to-br from-black via-slate-950 to-violet-950 text-white">
       <div className="container mx-auto px-4">
-
-
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -111,10 +128,10 @@ const ProDetail = () => {
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
-                
+
                 {/* Project title overlay */}
                 <div className="absolute bottom-0 left-0 right-0 p-4">
-                  <motion.h2 
+                  <motion.h2
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.3, duration: 0.5 }}
@@ -122,7 +139,7 @@ const ProDetail = () => {
                   >
                     {project}
                   </motion.h2>
-                  <motion.p 
+                  <motion.p
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.4, duration: 0.5 }}
@@ -137,7 +154,7 @@ const ProDetail = () => {
             {/* Project Details */}
             <div className="lg:w-1/2 p-6 lg:p-8 flex flex-col">
               {/* Description */}
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5, duration: 0.5 }}
@@ -152,7 +169,7 @@ const ProDetail = () => {
               </motion.div>
 
               {/* Key Features */}
-              <motion.div 
+              {/* <motion.div 
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.6, duration: 0.5 }}
@@ -179,54 +196,64 @@ const ProDetail = () => {
                     <p className="text-violet-100 text-sm">Structured and intuitive user interface</p>
                   </div>
                 </div>
-              </motion.div>
-
+              </motion.div> */}
 
               {/* Technologies Used */}
-         <motion.div 
-  initial={{ opacity: 0 }}
-  animate={{ opacity: 1 }}
-  transition={{ delay: 0.7, duration: 0.5 }}
-  className="mb-6"
->
-  <h3 className="flex items-center gap-2 text-yellow-400 font-semibold text-lg mb-3">
-    Technologies Used
-  </h3>
-  <div className="flex flex-wrap gap-2">
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.7, duration: 0.5 }}
+                className="mb-6"
+              >
+                <h3 className="flex items-center gap-2 text-yellow-400 font-semibold text-lg mb-3">
+                  Technologies Used
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {(() => {
+                    let techList = [];
+                    try {
+                      techList =
+                        typeof tech === "string" ? JSON.parse(tech) : tech;
+                    } catch (e) {
+                      console.error("Failed to parse tech field:", e);
+                      techList = [];
+                    }
 
-    {(() => {
-      let techList = [];
-      try {
-        techList = typeof tech === "string" ? JSON.parse(tech) : tech;
-      } catch (e) {
-        console.error("Failed to parse tech field:", e);
-        techList = [];
-      }
-
-      return Array.isArray(techList) && techList.map((t, idx) => (
-        <motion.span
-          key={idx}
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.8 + idx * 0.1, duration: 0.3 }}
-          className="px-3 py-1 rounded-full bg-gradient-to-r from-violet-700/50 to-violet-800/50 text-violet-200 text-xs font-medium border border-violet-600/30 hover:bg-yellow-600 hover:text-violet-900 transition-colors cursor-default flex items-center gap-1"
-        >
-          {t.toLowerCase().includes("react") && <span className="text-blue-400">⚛️</span>}
-          {t.toLowerCase().includes("tailwind") && <span className="text-cyan-400">🎨</span>}
-          {t.toLowerCase().includes("mongodb") && <span className="text-green-400">🍃</span>}
-          {t.toLowerCase().includes("express") && <span className="text-gray-200">🚀</span>}
-          {t.toLowerCase().includes("firebase") && <span className="text-yellow-400">🔥</span>}
-          {t}
-        </motion.span>
-      ));
-    })()}
-
-  </div>
-        </motion.div>
-
+                    return (
+                      Array.isArray(techList) &&
+                      techList.map((t, idx) => (
+                        <motion.span
+                          key={idx}
+                          initial={{ opacity: 0, scale: 0.8 }}
+                          animate={{ opacity: 1, scale: 1 }}
+                          transition={{ delay: 0.8 + idx * 0.1, duration: 0.3 }}
+                          className="px-3 py-1 rounded-full bg-gradient-to-r from-violet-700/50 to-violet-800/50 text-violet-200 text-xs font-medium border border-violet-600/30 hover:bg-yellow-600 hover:text-violet-900 transition-colors cursor-default flex items-center gap-1"
+                        >
+                          {t.toLowerCase().includes("react") && (
+                            <span className="text-blue-400">⚛️</span>
+                          )}
+                          {t.toLowerCase().includes("tailwind") && (
+                            <span className="text-cyan-400">🎨</span>
+                          )}
+                          {t.toLowerCase().includes("mongodb") && (
+                            <span className="text-green-400">🍃</span>
+                          )}
+                          {t.toLowerCase().includes("express") && (
+                            <span className="text-gray-200">🚀</span>
+                          )}
+                          {t.toLowerCase().includes("firebase") && (
+                            <span className="text-yellow-400">🔥</span>
+                          )}
+                          {t}
+                        </motion.span>
+                      ))
+                    );
+                  })()}
+                </div>
+              </motion.div>
 
               {plan && (
-                <motion.div 
+                <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.9, duration: 0.5 }}
@@ -242,7 +269,7 @@ const ProDetail = () => {
               )}
 
               {/* Action Buttons */}
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1.0, duration: 0.5 }}
@@ -280,7 +307,7 @@ const ProDetail = () => {
           </div>
         </motion.div>
 
-         {/* Back Button */}
+        {/* Back Button */}
         <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -295,7 +322,6 @@ const ProDetail = () => {
           </button>
         </motion.div>
       </div>
-
     </div>
   );
 };

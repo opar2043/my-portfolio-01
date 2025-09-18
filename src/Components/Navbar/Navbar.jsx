@@ -10,11 +10,13 @@ const Navbar = () => {
 
   const links = (
     <>
-      <li className="py-1 rounded-md hover:text-yellow-500 transition">
-        <Link to="\">
-          <li>Home</li>
+      
+        <Link to={'/'}>
+         <li className="py-1 rounded-md hover:text-yellow-500 transition">
+          Home
+          </li>
         </Link>
-      </li>
+      
       <li className="py-1 rounded-md hover:text-yellow-500 transition">
         <a href="#about">About</a>
       </li>
@@ -50,7 +52,7 @@ const Navbar = () => {
 
         {/* Desktop Links */}
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal font-semibold">{links}</ul>
+          <ul className="menu menu-horizontal font-semibold items-center">{links}</ul>
         </div>
 
         {/* Navbar End: Resume + Login */}
@@ -94,7 +96,7 @@ const Navbar = () => {
             ✕
           </button>
         </div>
-        <ul className="menu  gap-1">{links}</ul>
+        <ul className="menu items-center gap-1">{links}</ul>
       </div>
 
       <ToastContainer />
