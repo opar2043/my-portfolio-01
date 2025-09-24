@@ -1,4 +1,4 @@
-# Portfolio - React + Vite  
+# Portfolio - Rijoan Rashid Opar
 
 ![Portfolio Preview](https://rijoanrashidopar.netlify.app/)  
 
