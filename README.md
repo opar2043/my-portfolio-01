@@ -3,7 +3,7 @@
 ![Portfolio Preview](https://rijoanrashidopar.netlify.app/)  
 
 ## 🚀 Introduction  
-This is my personal portfolio website built with **React** and **Vite**. The portfolio showcases my skills as a **Frontend React Developer** with backend knowledge. It features my projects, skills, and experience in an interactive and responsive design.  
+This is my personal portfolio website built with **React** and **Vite**. The portfolio showcases my skills as a **Fullstack React Developer** with backend knowledge. It features my projects, skills, and experience in an interactive and responsive design.  
 
 ## 📑 Table of Contents  
 - [Live Demo](#-live-demo)  
