@@ -130,7 +130,7 @@ const About = () => {
                 className="flex gap-4 mt-8"
               >
                 <button className="px-6 py-3 bg-gradient-to-r from-violet-600 to-purple-600 text-white rounded-lg font-medium hover:from-violet-700 hover:to-purple-700 transition-all shadow-lg"> 
-                  <a href="https://drive.google.com/file/d/10K7XjFkJX8mAYD6GXzCYU6kefoTH3FOG/view?usp=drive_link">
+                  <a href="https://drive.google.com/file/d/14NamTFWQswBPswZG26jgNcrmGdJaubmj/view?usp=sharing">
                   Download Resume
                   </a>
                 </button>

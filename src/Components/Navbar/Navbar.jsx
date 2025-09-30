@@ -58,7 +58,7 @@ const Navbar = () => {
         {/* Navbar End: Resume + Login */}
         <div className="flex items-center space-x-4">
           <a
-            href="https://drive.google.com/file/d/10K7XjFkJX8mAYD6GXzCYU6kefoTH3FOG/view?usp=drive_link"
+            href="https://drive.google.com/file/d/14NamTFWQswBPswZG26jgNcrmGdJaubmj/view?usp=sharing"
             target="_blank"
             rel="noreferrer"
           >
